@@ -36,7 +36,7 @@ public class databaseconnection {
        }
 
        try {
-           String jdbc = "jdbc:mysql://127.11.113:3306/photoliease";
+           String jdbc = "jdbc:mysql://127.11.113.130:3306/photoliease";
            conn = (Connection) DriverManager.getConnection(jdbc, "adminYHfd3Q3", "jBG7NIjkdagK");
        } catch (SQLException ex) {
            System.err.println("Failed to Connect: " + ex.getMessage());
