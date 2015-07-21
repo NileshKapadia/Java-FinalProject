@@ -42,7 +42,11 @@ public class login extends HttpServlet {
         
         if(conn==null)
         {
-            System.out.println("connection failed");
+            pt.println("connection failed");
+        }
+        else
+        {
+             pt.println("connection success");
         }
         
         
