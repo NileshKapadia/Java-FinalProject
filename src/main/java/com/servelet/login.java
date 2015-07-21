@@ -57,9 +57,9 @@ public class login extends HttpServlet {
                    
                  } 
         if(id!=null) 
-            System.out.println("Login Success"); 
+            pt.println("Login Success"); 
 else 
-    System.out.println("Login Failed");
+    pt.println("Login Failed");
         
         
         } 
@@ -67,14 +67,14 @@ else
             Logger.getLogger(login.class.getName()).log(Level.SEVERE, null, ex);
         }
         
-        if(conn==null)
+       /* if(conn==null)
         {
             pt.println("connection failed");
         }
         else
         {
              pt.println("connection success");
-        }
+        }*/
         
         
 
