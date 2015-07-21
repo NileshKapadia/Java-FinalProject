@@ -15,6 +15,11 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import databaseCredential.databaseconnection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 
 /**
@@ -39,6 +44,28 @@ public class login extends HttpServlet {
         pt.println(password);
         
         Connection conn=databaseconnection.getConnection();
+        Statement stmt;
+        try {
+            stmt = conn.createStatement();
+            String id=null; 
+               
+                String sql = "SELECT * FROM login where username='"+username+"' and password='"+password+"'";
+                ResultSet rs = stmt.executeQuery(sql); 
+                while(rs.next()) 
+                { 
+                     id=rs.getString("username"); 
+                   
+                 } 
+        if(id!=null) 
+            System.out.println("Login Success"); 
+else 
+    System.out.println("Login Failed");
+        
+        
+        } 
+        catch (SQLException ex) {
+            Logger.getLogger(login.class.getName()).log(Level.SEVERE, null, ex);
+        }
         
         if(conn==null)
         {
@@ -50,7 +77,8 @@ public class login extends HttpServlet {
         }
         
         
-        
+
+
     }
 
    
