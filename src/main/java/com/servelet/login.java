@@ -8,11 +8,14 @@ package com.servelet;
 import static java.io.FileDescriptor.out;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.sql.Connection;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import databaseCredential.databaseconnection;
+
 
 /**
  *
@@ -28,10 +31,21 @@ public class login extends HttpServlet {
         String username=request.getParameter("username");
         String password=request.getParameter("password");
         
+        
         PrintWriter pt=response.getWriter();
+        
         
         pt.println(username);
         pt.println(password);
+        
+        Connection conn=databaseconnection.getConnection();
+        
+        if(conn==null)
+        {
+            System.out.println("connection failed");
+        }
+        
+        
         
     }
 
