@@ -20,6 +20,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.servlet.http.HttpSession;
 
 
 /**
@@ -57,9 +58,19 @@ public class login extends HttpServlet {
                    
                  } 
         if(id!=null) 
-            pt.println("Login Success"); 
-else 
-    pt.println("Login Failed");
+        {
+          pt.println("Login Success"); 
+         HttpSession  success = request.getSession(true);
+          success.setAttribute("name",id);
+          response.sendRedirect("../jsp/acount.jsp");
+        }
+    else 
+    {
+        pt.println("Login Failed");
+        HttpSession  fail = request.getSession(true);
+         fail.setAttribute("error","Please enter valid username and passwod");
+         response.sendRedirect("../jsp/login.jsp");
+    }
         
         
         } 
