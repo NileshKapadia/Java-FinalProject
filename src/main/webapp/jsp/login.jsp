@@ -12,6 +12,6 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>Alredy login</h1>
+        <h1>Here you are</h1>
     </body>
 </html>
