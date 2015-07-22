@@ -5,8 +5,14 @@
  */
 package com.servelet;
 
+import databaseCredential.databaseconnection;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.sql.Connection;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -33,9 +39,31 @@ public class sigup extends HttpServlet {
         pt.println(username);
         pt.println(password);
         pt.println(repeatpassword);
+        
+       Connection conn=databaseconnection.getConnection();
+       Statement smt;
+       try {
+           smt = conn.createStatement();
+           
+            String sql = "INSERT INTO login (username,password) "
+                   + "VALUES ('" + username + "', '" + password+ "')";
+          
+           smt.executeUpdate(sql);
+            pt.println("ddddddddddddddddddddddddd");
+            response.sendRedirect("jsp/login.jsp");
+           
+           
+           
+           
+       } catch (SQLException ex) {
+           Logger.getLogger(sigup.class.getName()).log(Level.SEVERE, null, ex);
+                 
+        
+                }
    }
-   
+}
+       
 
    
   
-}
+
