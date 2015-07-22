@@ -59,17 +59,17 @@ public class login extends HttpServlet {
                  } 
         if(id!=null) 
         {
-          pt.println("Login Success"); 
+          pt.println("Login Failed "); 
         HttpSession  success = request.getSession(true);
         success.setAttribute("name",id);
-          response.sendRedirect("jsp/acount.jsp");
+          response.sendRedirect("jsp/login.jsp");
             }
     else 
     {
-        pt.println("Login Failed");
+        pt.println("Login Success");
       HttpSession  fail = request.getSession(true);
        fail.setAttribute("error","Please enter valid username and passwod");         
-       response.sendRedirect("jsp/login.jsp");
+       response.sendRedirect("jsp/acount.jsp");
 }
         
         
