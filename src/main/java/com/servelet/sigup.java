@@ -24,15 +24,15 @@ public class sigup extends HttpServlet {
    protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
        
-        PrintWriter out = response.getWriter();
+        PrintWriter pt = response.getWriter();
         
-        String username=request.getParameter("username");
+        String username=request.getParameter("email");
         String password=request.getParameter("password");
         String repeatpassword=request.getParameter("rpassword");
         
-        out.println(username);
-        out.println(password);
-        out.println(repeatpassword);
+        pt.println(username);
+        pt.println(password);
+        pt.println(repeatpassword);
    }
    
 
