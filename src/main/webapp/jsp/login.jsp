@@ -18,7 +18,7 @@
 <script type="text/javascript" src="../js/cuf_run.js"></script>
     </head>
     <body>
-        <h1>Login Success!</h1>
+        
         
         <div class="main">
   <div class="main_resize">
@@ -51,6 +51,7 @@
       </div>
       </div>
        </div>
+        <input type="file" name="image" placeholder="Upload">
        
       
     </body>
