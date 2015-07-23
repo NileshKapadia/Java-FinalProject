@@ -24,7 +24,7 @@
   <div class="main_resize">
     <div class="header">
       <div class="logo">
-        <h1><a href="#"><span>Photo</span>Liaise<small>Simple web template</small></a></h1>
+        <h1><a href="#"><span>Photo</span>Liaise<small>Simple website</small></a></h1>
       </div>
       <div class="search">
         <form method="get" id="search" action="#">
