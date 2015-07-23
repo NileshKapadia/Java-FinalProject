@@ -22,7 +22,6 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.servlet.http.HttpSession;
 
-
 /**
  *
  * @author NILESH
@@ -30,68 +29,57 @@ import javax.servlet.http.HttpSession;
 @WebServlet(name = "login", urlPatterns = {"/login"})
 public class login extends HttpServlet {
 
- 
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        
-        String username=request.getParameter("username");
-        String password=request.getParameter("password");
-        
-        
-        PrintWriter pt=response.getWriter();
-        
-        
+
+        String username = request.getParameter("username");
+        String password = request.getParameter("password");
+
+        PrintWriter pt = response.getWriter();
+
         pt.println(username);
         pt.println(password);
-        
-        Connection conn=databaseconnection.getConnection();
+
+        Connection conn = databaseconnection.getConnection();
         Statement stmt;
         try {
             stmt = conn.createStatement();
-            String id=null; 
-               
-                String sql = "SELECT * FROM login where username='"+username+"' and password='"+password+"'";
-                ResultSet rs = stmt.executeQuery(sql); 
-                while(rs.next()) 
-                { 
-                     id=rs.getString("username"); 
-                   
-                 } 
-        if(id!=null) 
-        {
-          pt.println("Login Failed "); 
-        HttpSession  success = request.getSession(true);
-        success.setAttribute("name",id);
-          response.sendRedirect("jsp/acount.jsp");
+            String id = null;
+            String pass = null;
+
+            String sql = "SELECT * FROM login where username='" + username + "' and password='" + password + "'";
+            ResultSet rs = stmt.executeQuery(sql);
+            while (rs.next()) {
+                id = rs.getString("username");
+                 pass = rs.getString("password");
+
             }
-    else 
-    {
-        pt.println("Login Success");
-      HttpSession  fail = request.getSession(true);
-       fail.setAttribute("error","Please enter valid username and passwod");         
-       response.sendRedirect("jsp/login.jsp");
-}
-        
-        
-        } 
-        catch (SQLException ex) {
+            if (id != null && pass != null) {
+                pt.println("Login Sucess ");
+                HttpSession success = request.getSession(true);
+                success.setAttribute("name", id);
+                response.sendRedirect("jsp/acount.jsp");
+            } else {
+
+                pt.println("Login failed");
+                HttpSession fail = request.getSession(true);
+                fail.setAttribute("error", "Please enter valid username and passwod");
+                response.sendRedirect("jsp/login.jsp");
+
+            }
+
+        } catch (SQLException ex) {
             Logger.getLogger(login.class.getName()).log(Level.SEVERE, null, ex);
         }
-        
-       /* if(conn==null)
-        {
-            pt.println("connection failed");
-        }
-        else
-        {
-             pt.println("connection success");
-        }*/
-        
-        
 
-
+        /* if(conn==null)
+         {
+         pt.println("connection failed");
+         }
+         else
+         {
+         pt.println("connection success");
+         }*/
     }
-
-   
 
 }
