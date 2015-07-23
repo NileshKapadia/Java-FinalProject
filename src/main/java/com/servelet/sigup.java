@@ -35,18 +35,22 @@ public class sigup extends HttpServlet {
         String username=request.getParameter("email");
         String password=request.getParameter("password");
         String repeatpassword=request.getParameter("rpassword");
+        String age=request.getParameter("age");
+         int age1 = Integer.parseInt(age);
+        
         
         pt.println(username);
         pt.println(password);
         pt.println(repeatpassword);
+        pt.println(age1);
         
        Connection conn=databaseconnection.getConnection();
        Statement smt;
        try {
            smt = conn.createStatement();
            
-            String sql = "INSERT INTO login (username,password) "
-                   + "VALUES ('" + username + "', '" + password+ "')";
+            String sql = "INSERT INTO login (username,password,age) "
+                   + "VALUES ('" + username + "', '" + password+ "','" + age1+ "')";
           
            smt.executeUpdate(sql);
             pt.println("ddddddddddddddddddddddddd");
