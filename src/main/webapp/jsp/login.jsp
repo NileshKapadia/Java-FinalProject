@@ -8,7 +8,7 @@
 <!DOCTYPE html>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
 <head>
 <title>Photoliese</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -30,7 +30,7 @@
         <form method="get" id="search" action="#">
           <span>
           <input type="text" value="Search..." name="s" id="s" />
-          <input name="searchsubmit" type="image" src="images/search.gif" value="Go" id="searchsubmit" class="btn"  />
+          <input name="searchsubmit" type="image" src="../images/search.gif" value="Go" id="searchsubmit" class="btn"  />
           </span>
         </form>
         <!--/searchform -->
@@ -48,7 +48,7 @@
         </ul>
         <div class="clr"></div>
       </div>
-      <div class="hbg"><img src="images/header_images.jpg" width="923" height="291" alt="" /></div>
+      <div class="hbg"><img src="../images/header_images.jpg" width="923" height="291" alt="" /></div>
     </div>
     <div class="content">
       <div class="content_bg">
@@ -57,7 +57,7 @@
             <h2><span>Template License</span></h2>
             <div class="clr"></div>
             <p class="post-data"><span class="date">March 16, 2018</span> &nbsp;|&nbsp; Posted by <a href="#">Owner</a> &nbsp;|&nbsp; Filed under <a href="#">templates</a>, <a href="#">internet</a></p>
-            <img src="images/images_1.jpg" width="613" height="193" alt="" />
+            <img src="../images/images_1.jpg" width="613" height="193" alt="" />
             
             <p class="spec"><a href="#" class="com fr">Comments (3)</a> <a href="#" class="rm fl">Read more</a></p>
             <div class="clr"></div>
@@ -66,7 +66,7 @@
             <h2><span>Lorem Ipsum</span> Dolor Sit</h2>
             <div class="clr"></div>
             <p class="post-data"><span class="date">March 15, 2010</span> &nbsp;|&nbsp; Posted by <a href="#">Owner</a> &nbsp;|&nbsp; Filed under <a href="#">templates</a>, <a href="#">internet</a></p>
-            <img src="images/images_2.jpg" width="613" height="193" alt="" />
+            <img src="../images/images_2.jpg" width="613" height="193" alt="" />
            
             <p class="spec"><a href="#" class="com fr">Comments (7)</a> <a href="#" class="rm fl">Read more</a></p>
             <div class="clr"></div>
@@ -108,7 +108,7 @@
             <h2 class="star"><span>Wise Words</span></h2>
             <div class="clr"></div>
             <div class="testi">
-              <p><span class="q"><img src="images/qoute_1.gif" width="20" height="15" alt="" /></span> We can let circumstances rule us, or we can take charge and rule our lives from within. <span class="q"><img src="images/qoute_2.gif" width="20" height="15" alt="" /></span></p>
+              <p><span class="q"><img src="../images/qoute_1.gif" width="20" height="15" alt="" /></span> We can let circumstances rule us, or we can take charge and rule our lives from within. <span class="q"><img src="images/qoute_2.gif" width="20" height="15" alt="" /></span></p>
               <p class="title"><strong>Earl Nightingale</strong></p>
             </div>
           </div>
@@ -121,7 +121,7 @@
     <div class="fbg_resize">
       <div class="col c1">
         <h2><span>Image Gallery</span></h2>
-        <a href="#"><img src="images/pic_1.jpg" width="58" height="58" alt="" /></a> <a href="#"><img src="images/pic_2.jpg" width="58" height="58" alt="" /></a> <a href="#"><img src="images/pic_3.jpg" width="58" height="58" alt="" /></a> <a href="#"><img src="images/pic_4.jpg" width="58" height="58" alt="" /></a> <a href="#"><img src="images/pic_5.jpg" width="58" height="58" alt="" /></a> <a href="#"><img src="images/pic_6.jpg" width="58" height="58" alt="" /></a> </div>
+        <a href="#"><img src="images/pic_1.jpg" width="58" height="58" alt="" /></a> <a href="#"><img src="../images/pic_2.jpg" width="58" height="58" alt="" /></a> <a href="#"><img src="images/pic_3.jpg" width="58" height="58" alt="" /></a> <a href="#"><img src="images/pic_4.jpg" width="58" height="58" alt="" /></a> <a href="#"><img src="images/pic_5.jpg" width="58" height="58" alt="" /></a> <a href="#"><img src="images/pic_6.jpg" width="58" height="58" alt="" /></a> </div>
       <div class="col c2">
         <h2><span>Lorem Ipsum</span></h2>
         <p>Lorem ipsum dolor<br />
