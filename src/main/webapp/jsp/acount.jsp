@@ -12,6 +12,6 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>LOGIN SUCCESS</h1>
+        <h1>LOGIN failed</h1>
     </body>
 </html>
