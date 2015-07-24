@@ -40,6 +40,9 @@ public class photoupload extends HttpServlet {
         String uploadimage=request.getParameter(image);
         
         String caption1=request.getParameter(caption);
+        HttpSession session = null;
+
+       String userid= (String) session.getAttribute("username");
         
         pt.println(uploadimage);
         pt.println(caption1);
@@ -71,7 +74,7 @@ public class photoupload extends HttpServlet {
            // constructs SQL statement
            String sql = "INSERT INTO photoupload (username, photo, caption) values (?, ?, ?)";
            PreparedStatement statement = conn.prepareStatement(sql);
-           //statement.setString(1, username);
+           statement.setString(1, userid);
            
             
 //                File image = new File(image1);
