@@ -37,7 +37,10 @@ public class contact extends HttpServlet {
           String message1 = request.getParameter("message");
         
 
+          
         PrintWriter pt = response.getWriter();
+        pt.println(website1);
+        pt.println(name1);
 
        
 
