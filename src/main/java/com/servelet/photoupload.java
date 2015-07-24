@@ -34,12 +34,12 @@ public class photoupload extends HttpServlet {
             throws ServletException, IOException {
        
         PrintWriter pt = response.getWriter();
-        String image = null;
-        String caption = null;
         
-        String uploadimage=request.getParameter(image);
         
-        String caption1=request.getParameter(caption);
+        String uploadimage=request.getParameter("image");
+        
+        String caption1=request.getParameter("caption");
+         
         HttpSession session = null;
 
       // String userid= (String) session.getAttribute("username");
