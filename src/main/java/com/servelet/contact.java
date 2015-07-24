@@ -45,13 +45,14 @@ public class contact extends HttpServlet {
        
 
         Connection conn = databaseconnection.getConnection();
+        if(conn != null)
+        {
+            pt.println("connection success");
+        }
         Statement stmt;
         try {
             stmt = conn.createStatement();
-           
-
-            
-            String sql = "INSERT INTO contact (name, email, website,message) "
+            String sql = "INSERT INTO contact(name, email, website,message) "
                    + "VALUES ('" + name1 + "', '" + email1+ "','" + website1 + "','" + message1+ "')";
             ResultSet rs = stmt.executeQuery(sql);
             response.sendRedirect("jsp/contact.jsp");
