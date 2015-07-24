@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html >
+<html>
   <head>
     <meta charset="UTF-8">
     <title>Login/Sign-In</title>
@@ -73,6 +73,12 @@
         </div> 
         <div class="logmod__form">
             <form accept-charset="utf-8" action="login" class="simform" method="get">
+                
+                  <%
+
+                           if (session.getAttribute("User") == null) {
+                    %>
+                
             <div class="sminputs">
               <div class="input full">
                 <label class="string optional" for="user-name">Email*</label>

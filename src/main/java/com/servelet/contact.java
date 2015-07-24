@@ -54,7 +54,7 @@ public class contact extends HttpServlet {
             stmt = conn.createStatement();
             String sql = "INSERT INTO contact(name, email, website,message) "
                    + "VALUES ('" + name1 + "', '" + email1+ "','" + website1 + "','" + message1+ "')";
-            ResultSet rs = stmt.executeQuery(sql);
+           stmt.executeUpdate(sql);
             response.sendRedirect("jsp/contact.jsp");
             
         } catch (SQLException ex) {
