@@ -55,7 +55,7 @@
             <label for="caption">Caption 
                 <input type="text" name="caption"></label></br>
             <label for="caption">Image
-                <input type="file" name="image" placeholder="Upload"></label>
+                <input type="file" name="image" placeholder="Upload"></label><br>
                 <input type="submit" name="submit" value="Upload">
         </form>
       
