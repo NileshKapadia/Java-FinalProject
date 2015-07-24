@@ -24,27 +24,23 @@
   <div class="main_resize">
     <div class="header">
       <div class="logo">
-        <h1><a href="#"><span>Photo</span>Liaise<small>Simple web template</small></a></h1>
+        <h1><a href="#"><span>Photo</span>Liase<small>Simple website</small></a></h1>
       </div>
       <div class="search">
-        <form method="get" id="search" action="#">
-          <span>
-          <input type="text" value="Search..." name="s" id="s" />
-          
-          </span>
-        </form>
+        
+       
         <!--/searchform -->
         <div class="clr"></div>
       </div>
       <div class="clr"></div>
       <div class="menu_nav">
         <ul>
-          <li class="active"><a href="index.html">Home</a></li>
-          <li><a href="support.html">Support</a></li>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="blog.html">Contact Us</a></li>
-          <li><a href="login.html">Login</a></li>
-		  <li><a href="">Sign Up</a></li>
+          <li class="active"><a href="../index.html">Home</a></li>
+          <li><a href="../support.html">Support</a></li>
+          <li><a href="../about.html">About Us</a></li>
+          <li><a href="../blog.html">Contact Us</a></li>
+          <li><a href="../login.html">Login</a></li>
+		 
         </ul>
         <div class="clr"></div>
       </div>
