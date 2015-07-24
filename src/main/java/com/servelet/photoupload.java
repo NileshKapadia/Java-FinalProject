@@ -74,7 +74,7 @@ public class photoupload extends HttpServlet {
            // constructs SQL statement
            String sql = "INSERT INTO photoupload (username, photo, caption) values (?, ?, ?)";
            PreparedStatement statement = conn.prepareStatement(sql);
-           statement.setString(1, userid);
+           //statement.setString(1, userid);
            
             
 //                File image = new File(image1);
