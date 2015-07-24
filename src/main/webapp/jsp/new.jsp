@@ -1,6 +1,6 @@
 <%-- 
-    Document   : acount
-    Created on : Jul 22, 2015, 2:48:06 AM
+    Document   : new
+    Created on : Jul 24, 2015, 12:30:12 AM
     Author     : NILESH
 --%>
 
@@ -9,10 +9,9 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>failed</title>
+        <title>JSP Page</title>
     </head>
     <body>
-        <h1>LOGIN failed</h1>
-        <h1>Incorrect username/Password</h1>
+        <h1>Already logged in</h1>
     </body>
 </html>

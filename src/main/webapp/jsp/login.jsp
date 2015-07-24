@@ -39,7 +39,7 @@
           <li><a href="../support.html">Support</a></li>
           <li><a href="../about.html">About Us</a></li>
           <li><a href="../blog.html">Contact Us</a></li>
-          <li><a href="../login.html">Login</a></li>
+          <li><a href="../new.jsp">Login</a></li>
 		 
         </ul>
         <div class="clr"></div>
