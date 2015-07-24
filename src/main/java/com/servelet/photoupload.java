@@ -42,7 +42,7 @@ public class photoupload extends HttpServlet {
          
         HttpSession session = null;
 
-      // String userid= (String) session.getAttribute("username");
+       String userid= (String) session.getAttribute("username");
         
         pt.println(uploadimage);
         pt.println(caption1);
@@ -73,8 +73,9 @@ public class photoupload extends HttpServlet {
 
            // constructs SQL statement
            String sql = "INSERT INTO photoupload (username, photo, caption) values (?, ?, ?)";
+           
            PreparedStatement statement = conn.prepareStatement(sql);
-           //statement.setString(1, userid);
+           statement.setString(1, userid);
            
             
 //                File image = new File(image1);
@@ -93,8 +94,8 @@ public class photoupload extends HttpServlet {
            
            if (row > 0) {
               
-               HttpSession  success_ad = request.getSession(true);
-               success_ad.setAttribute("success_message","Your Photo is posted successfully!");
+               HttpSession  uploadsuccess = request.getSession(true);
+               uploadsuccess.setAttribute("success_message","Your Photo is posted successfully!");
                response.sendRedirect("jsp/Success.jsp");
           }
                 
