@@ -85,7 +85,7 @@ public class photoupload extends HttpServlet {
               
              statement.setBlob(2, inputStream);
            }
-           statement.setString(3, caption);
+           statement.setString(3, caption1);
            
 
            // sends the statement to the database server
