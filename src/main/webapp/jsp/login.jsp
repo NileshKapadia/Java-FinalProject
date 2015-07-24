@@ -53,8 +53,9 @@
        </div>
         <form action="photoupload" method="get">
             <label for="caption">Caption 
-             <input type="text" name="caption" value="caption"></label>
-        <input type="file" name="image" placeholder="Upload">
+                <input type="text" name="caption" value="caption"></label></br>
+            <label for="caption">Image
+                <input type="file" name="image" placeholder="Upload"></label>
         </form>
       
     </body>
