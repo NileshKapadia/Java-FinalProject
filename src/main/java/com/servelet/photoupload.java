@@ -42,7 +42,7 @@ public class photoupload extends HttpServlet {
         String caption1=request.getParameter(caption);
         HttpSession session = null;
 
-       String userid= (String) session.getAttribute("username");
+      // String userid= (String) session.getAttribute("username");
         
         pt.println(uploadimage);
         pt.println(caption1);
