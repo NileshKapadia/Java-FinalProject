@@ -11,6 +11,7 @@ import java.io.InputStream;
 import java.io.PrintWriter;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -81,10 +82,6 @@ public class photoupload extends HttpServlet {
            statement.setString(1, userid);
            
             
-//                File image = new File(image1);
-//                FileInputStream   fis = new FileInputStream(image.getAbsolutePath());
-//                statement.setBinaryStream(2, fis, (int) image.length());
-//                statement.execute();
             if (inputStream != null) {
               
              statement.setBlob(2, inputStream);
@@ -103,7 +100,27 @@ public class photoupload extends HttpServlet {
           }
                 
         
-    }   catch (SQLException ex) {
+      
+       
+
+          
+           String sql1 = "select * from photoupload";
+            ResultSet rs = statement.executeQuery(sql1);
+           String username=null;
+            String caption2=null;
+             String image=null;
+           while (rs.next()) {
+                username = rs.getString("username");
+                caption2 = rs.getString("caption");
+                image = rs.getString("image");
+                
+                pt.println(username);
+                   pt.println(caption2);
+
+            }
+           
+       
+       } catch (SQLException ex) {
             Logger.getLogger(photoupload.class.getName()).log(Level.SEVERE, null, ex);
         }
 
