@@ -96,7 +96,7 @@ public class photoupload extends HttpServlet {
               
                HttpSession  uploadsuccess = request.getSession(true);
                uploadsuccess.setAttribute("success_message","Your Photo is posted successfully!");
-               response.sendRedirect("jsp/Success.jsp");
+               //response.sendRedirect("jsp/Success.jsp");
           }
                 
         
