@@ -77,7 +77,7 @@ public class photoupload extends HttpServlet {
 
            // constructs SQL statement
            String sql = "INSERT INTO photoupload (username, photo, caption) values (?, ?, ?)";
-           
+             
            PreparedStatement statement = conn.prepareStatement(sql);
            statement.setString(1, userid);
            
@@ -91,20 +91,8 @@ public class photoupload extends HttpServlet {
 
            // sends the statement to the database server
           int row = statement.executeUpdate();
-           
-           if (row > 0) {
-              
-               HttpSession  uploadsuccess = request.getSession(true);
-               uploadsuccess.setAttribute("success_message","Your Photo is posted successfully!");
-               //response.sendRedirect("jsp/Success.jsp");
-          }
-                
-        
-      
-       
-
           
-           String sql1 = "select * from photoupload";
+          String sql1 = "select * from photoupload";
             ResultSet rs = statement.executeQuery(sql1);
            String username=null;
             String caption2=null;
@@ -118,6 +106,20 @@ public class photoupload extends HttpServlet {
                    pt.println(caption2);
 
             }
+           
+           
+           if (row > 0) {
+              
+               HttpSession  uploadsuccess = request.getSession(true);
+               uploadsuccess.setAttribute("success_message","Your Photo is posted successfully!");
+               //response.sendRedirect("jsp/Success.jsp");
+          }
+                
+        
+      
+       
+
+          
            
        
        } catch (SQLException ex) {
