@@ -48,6 +48,7 @@ public class photoupload extends HttpServlet {
         
         pt.println(uploadimage);
         pt.println(caption1);
+         pt.println(userid);
         
         
         InputStream inputStream = null; // input stream of the upload file
