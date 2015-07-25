@@ -47,7 +47,8 @@
       </div>
       </div>
        </div>
-        <form action="/photoupload" method="post" enctype="multipart/form-data ">
+       
+            <form action="/photoupload" method="post" enctype="multipart/form-data">
             <label for="caption">Caption hello1
                 <input type="text" name="caption"></label></br>
             <label for="caption">Image
