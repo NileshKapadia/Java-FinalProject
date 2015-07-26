@@ -62,17 +62,18 @@
         </form>
         
          <%
-                        if (session.getAttribute("city") == null || session.getAttribute("country") == null) {
-                    %>
-
-
-
-                    <%
+                        if (session.getAttribute("username")==null {
+                    
                     } else {
                         Connection conn=databaseconnection.getConnection();
                       PrintWriter out = response.getWriter();
+                     
                         if (conn == null) {
-                        } else {
+                            out.println("success");
+                        }
+                        
+                         else 
+                        {
                            
                             Statement smt = conn.createStatement();
                             String query = "select username,image,caption from photoupload ";
