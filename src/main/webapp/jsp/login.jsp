@@ -4,6 +4,7 @@
     Author     : NILESH
 --%>
 
+<%@page import="java.io.PrintWriter"%>
 <%@page import="java.sql.ResultSet"%>
 <%@page import="java.sql.Statement"%>
 <%@page import="databaseCredential.databaseconnection"%>
@@ -69,6 +70,7 @@
                     <%
                     } else {
                         Connection conn=databaseconnection.getConnection();
+                      PrintWriter out = response.getWriter();
                         if (conn == null) {
                         } else {
                            
@@ -79,9 +81,10 @@
                             boolean empty= true;
                             
                             while (rs.next()) {
-                                String id = rs.getString("username");
-                                String address = rs.getString("caption");
-                                
+                                String username = rs.getString("username");
+                                String caption = rs.getString("caption");
+                                out.println(username);
+                                 out.println(caption);
                                 empty =false;
                     %>
       
