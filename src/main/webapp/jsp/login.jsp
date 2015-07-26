@@ -62,9 +62,7 @@
         </form>
         
          <%
-                        if (session.getAttribute("username")==null {
-                    
-                    } else {
+                      
                         Connection conn=databaseconnection.getConnection();
                       PrintWriter out = response.getWriter();
                      
@@ -87,6 +85,8 @@
                                 out.println(username);
                                  out.println(caption);
                                 empty =false;
+                            }
+                        }
                     %>
       
     </body>
