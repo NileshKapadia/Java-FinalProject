@@ -48,10 +48,10 @@
       </div>
        </div>
        
-            <form action="/uploadsuccess" method="post" enctype="multipart/form-data">
-            <label for="caption">Caption hello1
+            <form action="/photoupload" method="post" enctype="multipart/form-data">
+            <label for="caption">Caption:
                 <input type="text" name="caption"></label></br>
-            <label for="caption">Image
+            <label for="caption">Image:
                 <input type="file" name="image" placeholder="Upload"></label><br>
                 <input type="submit" name="submit" value="Upload">
         </form>
