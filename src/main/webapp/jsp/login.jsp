@@ -4,6 +4,10 @@
     Author     : NILESH
 --%>
 
+<%@page import="java.sql.ResultSet"%>
+<%@page import="java.sql.Statement"%>
+<%@page import="databaseCredential.databaseconnection"%>
+<%@page import="java.sql.Connection"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -55,6 +59,31 @@
                 <input type="file" name="image" placeholder="Upload"></label><br>
                 <input type="submit" name="submit" value="Upload">
         </form>
+        
+         <%
+                        if (session.getAttribute("city") == null || session.getAttribute("country") == null) {
+                    %>
+
+
+
+                    <%
+                    } else {
+                        Connection conn=databaseconnection.getConnection();
+                        if (conn == null) {
+                        } else {
+                           
+                            Statement smt = conn.createStatement();
+                            String query = "select username,image,caption from photoupload ";
+                            ResultSet rs = smt.executeQuery(query);
+                            
+                            boolean empty= true;
+                            
+                            while (rs.next()) {
+                                String id = rs.getString("username");
+                                String address = rs.getString("caption");
+                                
+                                empty =false;
+                    %>
       
     </body>
 </html>
