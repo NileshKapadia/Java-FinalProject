@@ -24,13 +24,15 @@
 <script type="text/javascript" src="../js/cufon-yui.js"></script>
 <script type="text/javascript" src="../js/arial.js"></script>
 <script type="text/javascript" src="../js/cuf_run.js"></script>
+<script src="http://code.jquery.com/jquery.min.js"></script>
 <script type="text/javascript" src="../js/profilepage.js"></script>
+
 
     </head>
     <body>
         
         
-        <div class="main">
+        <div class="main">  
   <div class="main_resize">
     <div class="header">
       <div class="logo">
