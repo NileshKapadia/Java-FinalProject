@@ -63,7 +63,7 @@
         
          <%
                       
-                        Connection conn=databaseconnection.getConnection();
+                       Connection conn=databaseconnection.getConnection();
                       PrintWriter out = response.getWriter();
                      
                         if (conn == null) {
@@ -74,7 +74,7 @@
                         {
                            
                             Statement smt = conn.createStatement();
-                            String query = "select username,image,caption from photoupload ";
+                            String query = "select * from photoupload ";
                             ResultSet rs = smt.executeQuery(query);
                             
                             
