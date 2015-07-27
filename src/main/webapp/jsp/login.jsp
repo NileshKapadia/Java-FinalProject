@@ -86,8 +86,8 @@
                             
                             
                             while (rs.next()) {
-                                String username = rs.getString("username")%>;<br><%
-                                        String caption = rs.getString("caption");%><br><%
+                                String username = rs.getString("username");<br>
+                                String caption = rs.getString("caption");<br>
                                 out.println(username);
                                  out.println(caption);
                                 
