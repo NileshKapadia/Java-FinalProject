@@ -77,14 +77,14 @@
                             String query = "select username,image,caption from photoupload ";
                             ResultSet rs = smt.executeQuery(query);
                             
-                            boolean empty= true;
+                            
                             
                             while (rs.next()) {
                                 String username = rs.getString("username");
                                 String caption = rs.getString("caption");
                                 out.println(username);
                                  out.println(caption);
-                                empty =false;
+                                
                             }
                         }
                     %>
