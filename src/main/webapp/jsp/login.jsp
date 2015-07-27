@@ -94,8 +94,8 @@
                                 out.println(username);
                                  out.println(caption);
                                  
-                                  Blob  b = rs.getBlob("image");            
-            response.setContentType("image/jpeg");
+                      Blob  b = rs.getBlob("image");            
+            response.setContentType("image/jpg");
             response.setContentLength( (int) b.length());
            // response.setContentLength(10);
             InputStream is = b.getBinaryStream();
