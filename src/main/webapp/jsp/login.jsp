@@ -4,6 +4,9 @@
     Author     : NILESH
 --%>
 
+<%@page import="java.io.OutputStream"%>
+<%@page import="java.io.InputStream"%>
+<%@page import="java.sql.Blob"%>
 <%@page import="java.io.PrintWriter"%>
 <%@page import="java.sql.ResultSet"%>
 <%@page import="java.sql.Statement"%>
@@ -86,10 +89,22 @@
                             
                             
                             while (rs.next()) {
-                                String username = rs.getString("username");<br>
-                                String caption = rs.getString("caption");<br>
+                                String username = rs.getString("username");
+                                String caption = rs.getString("caption");
                                 out.println(username);
                                  out.println(caption);
+                                 
+                                  Blob  b = rs.getBlob("image");            
+            response.setContentType("image/jpeg");
+            response.setContentLength( (int) b.length());
+           // response.setContentLength(10);
+            InputStream is = b.getBinaryStream();
+            OutputStream os = response.getOutputStream();
+            byte buf[] = new byte[(int) b.length()];
+            is.read(buf);
+            
+           os.write(buf);
+            os.close()
                                 
                             }
                         }
