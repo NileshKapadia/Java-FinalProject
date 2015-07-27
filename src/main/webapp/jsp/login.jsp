@@ -56,13 +56,13 @@
       </div>
        </div>
        
-            <form action="/photoupload" method="post" enctype="multipart/form-data">
+           
             <label for="caption">Caption:
-                <input type="text" name="caption"></label></br>
+                <input type="text" id="caption"></label></br>
             <label for="caption">Image:
-                <input type="file" name="image" placeholder="Upload"></label><br>
-                <input type="submit" name="submit" value="Upload">
-        </form>
+                <input type="file" id="image" placeholder="Upload"></label><br>
+                <input type="submit" name="submit" id="reg" value="Upload">
+       
        <%
                         if (session.getAttribute("username") == null ) {
                     %>
