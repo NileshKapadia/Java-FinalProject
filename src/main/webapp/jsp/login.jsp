@@ -70,7 +70,7 @@
                     } else {
                       
                      Connection conn=databaseconnection.getConnection();
-                      PrintWriter out = response.getWriter();
+                    //  PrintWriter out = response.getWriter();
                      
                         if (conn == null) {
                             out.println("success");
