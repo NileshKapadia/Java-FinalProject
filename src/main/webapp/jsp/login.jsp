@@ -60,10 +60,18 @@
                 <input type="file" name="image" placeholder="Upload"></label><br>
                 <input type="submit" name="submit" value="Upload">
         </form>
-        
+        <%
+                        if (session.getAttribute("username") == null ) {
+                    %>
+
+
+
+                    <%
+                    }  
+else {
          <%
                       
-                       Connection conn=databaseconnection.getConnection();
+                     Connection conn=databaseconnection.getConnection();
                       PrintWriter out = response.getWriter();
                      
                         if (conn == null) {
@@ -87,6 +95,7 @@
                                 
                             }
                         }
+                       } 
                     %>
       
     </body>
