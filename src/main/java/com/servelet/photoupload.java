@@ -39,7 +39,7 @@ public class photoupload extends HttpServlet {
         PrintWriter pt = response.getWriter();
         
         
-        String uploadimage=request.getParameter("image");
+        //String uploadimage=request.getParameter("image");
         
         String caption1=request.getParameter("caption");
          
@@ -47,7 +47,7 @@ public class photoupload extends HttpServlet {
         String userid =(String) session.getAttribute("username");
       
         
-        pt.println(uploadimage);
+       // pt.println(uploadimage);
         pt.println(caption1);
          pt.println(userid);
         
@@ -58,9 +58,9 @@ public class photoupload extends HttpServlet {
        Part filePart = request.getPart("image");
        if (filePart != null) {
            
-            pt.println(filePart.getName());
-           pt.println(filePart.getSize());
-           pt.println(filePart.getContentType());
+           // pt.println(filePart.getName());
+          // pt.println(filePart.getSize());
+          // pt.println(filePart.getContentType());
             
            
            inputStream = filePart.getInputStream();
@@ -92,7 +92,7 @@ public class photoupload extends HttpServlet {
            // sends the statement to the database server
           int row = statement.executeUpdate();
           
-          String sql1 = "select * from photoupload";
+         /* String sql1 = "select * from photoupload";
             ResultSet rs = statement.executeQuery(sql1);
            String username=null;
             String caption2=null;
@@ -105,7 +105,7 @@ public class photoupload extends HttpServlet {
                 pt.println(username);
                    pt.println(caption2);
 
-            }
+            }*/
            
            
            if (row > 0) {
