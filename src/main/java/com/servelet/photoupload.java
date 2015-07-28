@@ -126,7 +126,8 @@ public class photoupload extends HttpServlet {
                }
                byte[] dt = new byte[166666];
                base64String = DatatypeConverter.printBase64Binary(output.toByteArray());
-pt.write(base64String);
+                pt.write(base64String);
+                   pt.println(base64String);
            }
        
           
