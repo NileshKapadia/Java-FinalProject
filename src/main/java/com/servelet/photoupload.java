@@ -97,47 +97,62 @@ public class photoupload extends HttpServlet {
           
           
           
-           String imagequery = "SELECT image from photoupload";
+          } catch (SQLException ex) {
+            Logger.getLogger(photoupload.class.getName()).log(Level.SEVERE, null, ex);
+        }
 
-           statement = (PreparedStatement) conn.createStatement();
-           ResultSet rs = statement.executeQuery(imagequery);
+           
+           
+ }
+    
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException 
+    {
+        try {
+            PrintWriter pt = response.getWriter();
+            String imagequery = "SELECT image from photoupload";
+            
+            Connection conn = databaseconnection.getConnection();
+            PreparedStatement statement = conn.prepareStatement(imagequery);
+            
+            ResultSet rs = statement.executeQuery(imagequery);
             int count = 0;
             int a1= 0;
             String base64String="";
             
-
-           while (rs.next()) {
-               count++;
-
-               InputStream stream = rs.getBinaryStream(1);
-               ByteArrayOutputStream output = new ByteArrayOutputStream();
-
-               try {
-                   a1 = stream.read();
-               } catch (IOException ex) {
-               }
-               while (a1 >= 0) {
-                   output.write((char) a1);
-                   try {
-                       a1 = stream.read();
-                   } catch (IOException ex) {
-
-                   }
-               }
-               byte[] dt = new byte[166666];
-               base64String = DatatypeConverter.printBase64Binary(output.toByteArray());
+            
+            while (rs.next()) {
+                count++;
+                
+                InputStream stream = rs.getBinaryStream(1);
+                ByteArrayOutputStream output = new ByteArrayOutputStream();
+                
+                try {
+                    a1 = stream.read();
+                } catch (IOException ex) {
+                }
+                while (a1 >= 0) {
+                    output.write((char) a1);
+                    try {
+                        a1 = stream.read();
+                    } catch (IOException ex) {
+                        
+                    }
+                }
+                byte[] dt = new byte[166666];
+                base64String = DatatypeConverter.printBase64Binary(output.toByteArray());
                 pt.write(base64String);
-                   
-           }
+                
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(photoupload.class.getName()).log(Level.SEVERE, null, ex);
+        }
        
           
-       } catch (SQLException ex) {
-           String msg = ex.getMessage();
-
        } 
 
     
-          
+}          
           
           
          /* String sql1 = "select * from photoupload";
@@ -158,11 +173,11 @@ public class photoupload extends HttpServlet {
            
            
                //response.sendRedirect("jsp/Success.jsp");
-          }
+          
+    
+    
 
-           
-           
- }
+
 
     
     
