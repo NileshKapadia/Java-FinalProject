@@ -48,7 +48,7 @@
       <div class="menu_nav">
         <ul>
           <li class="active"><a href="../index.html">Home</a></li>
-          <li><a href="../support.html">Support</a></li>
+         
           <li><a href="../about.html">About Us</a></li>
           <li><a href="../blog.html">Contact Us</a></li>
           <li><a href="../newhtml.html">Login</a></li>

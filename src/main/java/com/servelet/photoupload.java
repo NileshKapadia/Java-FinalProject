@@ -159,22 +159,14 @@ public class photoupload extends HttpServlet {
            
                //response.sendRedirect("jsp/Success.jsp");
           }
-           
-           
-                
-        
-      
-       
 
-          
            
-       
-       }
+           
+ }
 
     
     
 
 
   
-
 
