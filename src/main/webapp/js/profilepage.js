@@ -74,7 +74,24 @@ alert('dflhdxfibhfi');
        }
 
 
-
+  $.ajax({
+                  url: formURL,
+                  type: "GET",
+                 
+                  //processData: false,
+                  success: function (data, textStatus, jqXHR) {
+                      alert(data);
+                     
+                      if(data==="done")
+                      {
+                          alert('Your Image has been Uploaded');
+                      }
+                      },
+                        error: function(jqxhr, status, errorMsg) {
+                 alert('Failed! ' + errorMsg);
+                   }
+                
+              });
    });
    });
 
