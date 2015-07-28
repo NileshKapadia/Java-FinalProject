@@ -6,6 +6,7 @@
 package com.servelet;
 
 import databaseCredential.databaseconnection;
+import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.PrintWriter;
@@ -23,6 +24,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import javax.servlet.http.Part;
+import javax.xml.bind.DatatypeConverter;
 
 /**
  *
@@ -31,6 +33,7 @@ import javax.servlet.http.Part;
 @WebServlet(name = "photoupload", urlPatterns = {"/photoupload"})
 @MultipartConfig(maxFileSize = 16177215)
 public class photoupload extends HttpServlet {
+    private Object Json;
     
     
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
@@ -48,8 +51,8 @@ public class photoupload extends HttpServlet {
       
         
        // pt.println(uploadimage);
-        pt.println(caption1);
-         pt.println(userid);
+       // pt.println(caption1);
+         //pt.println(userid);
         
         
         InputStream inputStream = null; // input stream of the upload file
@@ -92,6 +95,50 @@ public class photoupload extends HttpServlet {
            // sends the statement to the database server
           int row = statement.executeUpdate();
           
+          
+          
+           String imagequery = "SELECT image from photoupload";
+
+           statement = (PreparedStatement) conn.createStatement();
+           ResultSet rs = statement.executeQuery(imagequery);
+            int count = 0;
+            int a1= 0;
+            String base64String="";
+            
+
+           while (rs.next()) {
+               count++;
+
+               InputStream stream = rs.getBinaryStream(1);
+               ByteArrayOutputStream output = new ByteArrayOutputStream();
+
+               try {
+                   a1 = stream.read();
+               } catch (IOException ex) {
+               }
+               while (a1 >= 0) {
+                   output.write((char) a1);
+                   try {
+                       a1 = stream.read();
+                   } catch (IOException ex) {
+
+                   }
+               }
+               byte[] dt = new byte[166666];
+               base64String = DatatypeConverter.printBase64Binary(output.toByteArray());
+pt.write(base64String);
+           }
+       
+          
+       } catch (SQLException ex) {
+           String msg = ex.getMessage();
+
+       } 
+
+    
+          
+          
+          
          /* String sql1 = "select * from photoupload";
             ResultSet rs = statement.executeQuery(sql1);
            String username=null;
@@ -108,12 +155,11 @@ public class photoupload extends HttpServlet {
             }*/
            
            
-           if (row > 0) {
-              
-               HttpSession  uploadsuccess = request.getSession(true);
-               uploadsuccess.setAttribute("success_message","Your Photo is posted successfully!");
+           
                //response.sendRedirect("jsp/Success.jsp");
           }
+           
+           
                 
         
       
@@ -122,13 +168,11 @@ public class photoupload extends HttpServlet {
           
            
        
-       } catch (SQLException ex) {
-            Logger.getLogger(photoupload.class.getName()).log(Level.SEVERE, null, ex);
-        }
+       }
 
     
-    }
-}
+    
+
 
   
 
