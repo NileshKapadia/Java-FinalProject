@@ -10,7 +10,7 @@ $("#reg").click(function (e) {
        e.preventDefault();
 alert('dflhdxfibhfi');
        var imgvalid = false;
-       var formURL = "photoupload";
+       var formURL = "/photoupload";
        //var data = $("#myform").serialize();
        var jForm = new FormData();
        jForm.append("caption", $('#caption').val());
