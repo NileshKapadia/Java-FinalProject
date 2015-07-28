@@ -49,6 +49,7 @@ alert('dflhdxfibhfi');
            alert('username field cannot be empty');
        }
        else {
+           alert("in else");
            $.ajax({
                   url: formURL,
                   type: "POST",
