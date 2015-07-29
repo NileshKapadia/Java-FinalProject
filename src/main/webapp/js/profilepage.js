@@ -52,7 +52,7 @@ alert('dflhdxfibhfi');
            alert("in else");
            $.ajax({
                   url: formURL,
-                  type: "POST",
+                  method: "POST",
                   data: jForm,
                   processData: false,
                   contentType: false,
@@ -76,7 +76,7 @@ alert('dflhdxfibhfi');
 
   $.ajax({
                   url: formURL,
-                  type: "GET",
+                  method: "GET",
                  
                   //processData: false,
                   success: function (data, textStatus, jqXHR) {
