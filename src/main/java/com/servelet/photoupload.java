@@ -39,6 +39,10 @@ public class photoupload extends HttpServlet {
 ////    protected void doGet(HttpServletRequest request, HttpServletResponse response)
 ////            throws ServletException, IOException 
 ////    {
+    
+//response.setHeader("Cache-control", "no-cache, no-store");
+//response.setHeader("Pragma", "no-cache");
+//response.setHeader("Expires", "-1");
 ////        try {
 ////            PrintWriter pt = response.getWriter();
 ////            String imagequery = "SELECT photo from photoupload";
@@ -92,6 +96,9 @@ public class photoupload extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
        
+response.setHeader("Cache-control", "no-cache, no-store");
+response.setHeader("Pragma", "no-cache");
+response.setHeader("Expires", "-1");
         PrintWriter pt = response.getWriter();
         
         
