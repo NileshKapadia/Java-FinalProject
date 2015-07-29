@@ -35,57 +35,57 @@ import javax.xml.bind.DatatypeConverter;
 @MultipartConfig(maxFileSize = 16177215)
 public class photoupload extends HttpServlet {
     private Object Json;
-     @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException 
-    {
-        try {
-            PrintWriter pt = response.getWriter();
-            String imagequery = "SELECT photo from photoupload";
-            
-            Connection conn = databaseconnection.getConnection();
-            Statement statement = conn.createStatement();
-            
-            ResultSet rs = statement.executeQuery(imagequery);
-            int count = 0;
-            int a1= 0;
-         //   String base64String="";
-            
-            
-            while (rs.next()) {
-                count++;
-                
-                InputStream stream = rs.getBinaryStream(1);
-                ByteArrayOutputStream output = new ByteArrayOutputStream();
-                
-                
-                try {
-                    a1 = stream.read();
-                } catch (IOException ex) {
-                pt.write("in stream problem");
-                }
-                while (a1 >= 0) {
-                    output.write((char) a1);
-                    try {
-                        a1 = stream.read();
-                    } catch (IOException ex) {
-                     pt.write("cant write array");
-                    }
-                }
-                byte[] dt = new byte[166666];
-               String base64String = DatatypeConverter.printBase64Binary(output.toByteArray());
-                pt.write(base64String);
-               // pt.write("rfhrfjtykhjfjyukjtyjgjk,uimhgjgykutju");
-            }
-        } catch (SQLException ex) {
-                        PrintWriter pt = response.getWriter();
-
-            pt.write("in cachen uggybgybyby");
-            //.getLogger(photoupload.class.getName()).log(Level.SEVERE, null, ex);
-        }
-       
-          
-       } 
+////     @Override
+////    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+////            throws ServletException, IOException 
+////    {
+////        try {
+////            PrintWriter pt = response.getWriter();
+////            String imagequery = "SELECT photo from photoupload";
+////            
+////            Connection conn = databaseconnection.getConnection();
+////            Statement statement = conn.createStatement();
+////            
+////            ResultSet rs = statement.executeQuery(imagequery);
+////            int count = 0;
+////            int a1= 0;
+////         //   String base64String="";
+////            
+////            
+////            while (rs.next()) {
+////                count++;
+////                
+////                InputStream stream = rs.getBinaryStream(1);
+////                ByteArrayOutputStream output = new ByteArrayOutputStream();
+////                
+////                
+////                try {
+////                    a1 = stream.read();
+////                } catch (IOException ex) {
+////                pt.write("in stream problem");
+////                }
+////                while (a1 >= 0) {
+////                    output.write((char) a1);
+////                    try {
+////                        a1 = stream.read();
+////                    } catch (IOException ex) {
+////                     pt.write("cant write array");
+////                    }
+////                }
+////                byte[] dt = new byte[166666];
+////               String base64String = DatatypeConverter.printBase64Binary(output.toByteArray());
+////                pt.write(base64String);
+////               // pt.write("rfhrfjtykhjfjyukjtyjgjk,uimhgjgykutju");
+////            }
+////        } catch (SQLException ex) {
+////                        PrintWriter pt = response.getWriter();
+////
+////            pt.write("in cachen uggybgybyby");
+////            //.getLogger(photoupload.class.getName()).log(Level.SEVERE, null, ex);
+////        }
+////       
+////          
+////       } 
 
     
     @Override
