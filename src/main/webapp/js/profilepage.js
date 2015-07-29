@@ -68,12 +68,14 @@ alert('dflhdxfibhfi');
                  
                   //processData: false,
                   success: function (data, textStatus, jqXHR) {
+                     alert(data);
                       //var base64_string = "/9j/4AAQSkZJRgABAgAAAQABAAD//...";
 var img = document.createElement("img");
+var OIMg=document.createElement(img);
 // added `width` , `height` properties to `img` attributes
-img.width = "250px";
-img.height = "250px";
-img.src = "data:image/jpg;base64," + data;
+OIMg.width = "250px";
+OIMg.height = "250px";
+OIMg.src = "data:image/jpg;base64," + data;
 var preview = document.getElementById("img_preview");
 preview.appendChild(img);
                      
