@@ -71,10 +71,9 @@ alert('dflhdxfibhfi');
                    }
                 
               });
-       }
-
-
-  $.ajax({
+              
+              
+               $.ajax({
                   url: formURL,
                   method: "GET",
                  
@@ -92,6 +91,10 @@ alert('dflhdxfibhfi');
                    }
                 
               });
+       }
+
+
+ 
    });
    });
 
