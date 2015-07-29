@@ -105,6 +105,7 @@ public class photoupload extends HttpServlet {
            
  }
     
+    @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException 
     {
@@ -126,6 +127,7 @@ public class photoupload extends HttpServlet {
                 
                 InputStream stream = rs.getBinaryStream(1);
                 ByteArrayOutputStream output = new ByteArrayOutputStream();
+                
                 
                 try {
                     a1 = stream.read();
