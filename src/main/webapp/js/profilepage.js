@@ -68,7 +68,14 @@ alert('dflhdxfibhfi');
                  
                   //processData: false,
                   success: function (data, textStatus, jqXHR) {
-                      alert(data);
+                      //var base64_string = "/9j/4AAQSkZJRgABAgAAAQABAAD//...";
+var img = document.createElement("img");
+// added `width` , `height` properties to `img` attributes
+img.width = "250px";
+img.height = "250px";
+img.src = "data:image/png;base64," + data;
+var preview = document.getElementById("img_preview");
+preview.appendChild(img);
                      
                       if(data==="done")
                       {
