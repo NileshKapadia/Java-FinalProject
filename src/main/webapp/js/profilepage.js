@@ -61,19 +61,8 @@ alert('dflhdxfibhfi');
                   success: function (data, textStatus, jqXHR) {
                       alert("post done");
                      alert(data);
-                      if(data==="done")
-                      {
-                          alert('Your Image has been Uploaded');
-                      }
-                      },
-                        error: function(jqxhr, status, errorMsg) {
-                 alert('Failed! ' + errorMsg);
-                   }
-                
-              });
-              
-              
-               $.ajax({
+                     
+                      $.ajax({
                   url: formURL,
                   method: "GET",
                  
@@ -91,6 +80,19 @@ alert('dflhdxfibhfi');
                    }
                 
               });
+                      if(data==="done")
+                      {
+                          alert('Your Image has been Uploaded');
+                      }
+                      },
+                        error: function(jqxhr, status, errorMsg) {
+                 alert('Failed! ' + errorMsg);
+                   }
+                
+              });
+              
+              
+              
        }
 
 
