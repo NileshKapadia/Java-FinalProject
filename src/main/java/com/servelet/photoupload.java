@@ -49,7 +49,7 @@ public class photoupload extends HttpServlet {
             ResultSet rs = statement.executeQuery(imagequery);
             int count = 0;
             int a1= 0;
-            String base64String="";
+         //   String base64String="";
             
             
             while (rs.next()) {
@@ -73,7 +73,7 @@ public class photoupload extends HttpServlet {
                     }
                 }
                 byte[] dt = new byte[166666];
-                base64String = DatatypeConverter.printBase64Binary(output.toByteArray());
+               String base64String = DatatypeConverter.printBase64Binary(output.toByteArray());
                 pt.write(base64String);
                // pt.write("rfhrfjtykhjfjyukjtyjgjk,uimhgjgykutju");
             }
@@ -151,6 +151,7 @@ public class photoupload extends HttpServlet {
           
           
           } catch (SQLException ex) {
+              pt.write("post cache");
             Logger.getLogger(photoupload.class.getName()).log(Level.SEVERE, null, ex);
         }
 

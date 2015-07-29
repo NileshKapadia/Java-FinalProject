@@ -59,8 +59,8 @@ alert('dflhdxfibhfi');
                   cache: false,
                   //processData: false,
                   success: function (data, textStatus, jqXHR) {
-                      alert(data);
-                     
+                      alert("post done");
+                     alert(data);
                       if(data==="done")
                       {
                           alert('Your Image has been Uploaded');
