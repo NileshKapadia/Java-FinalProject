@@ -132,13 +132,14 @@ public class photoupload extends HttpServlet {
                 try {
                     a1 = stream.read();
                 } catch (IOException ex) {
+                pt.write("in stream problem");
                 }
                 while (a1 >= 0) {
                     output.write((char) a1);
                     try {
                         a1 = stream.read();
                     } catch (IOException ex) {
-                        
+                     pt.write("cant write array");
                     }
                 }
                 byte[] dt = new byte[166666];
@@ -147,7 +148,10 @@ public class photoupload extends HttpServlet {
                 pt.write("rfhrfjtykhjfjyukjtyjgjk,uimhgjgykutju");
             }
         } catch (SQLException ex) {
-            Logger.getLogger(photoupload.class.getName()).log(Level.SEVERE, null, ex);
+                        PrintWriter pt = response.getWriter();
+
+            pt.write("in cache");
+            //.getLogger(photoupload.class.getName()).log(Level.SEVERE, null, ex);
         }
        
           
