@@ -143,8 +143,8 @@ public class photoupload extends HttpServlet {
                 }
                 byte[] dt = new byte[166666];
                 base64String = DatatypeConverter.printBase64Binary(output.toByteArray());
-                pt.write(base64String);
-                
+                //pt.write(base64String);
+                pt.write("rfhrfjtykhjfjyukjtyjgjk,uimhgjgykutju");
             }
         } catch (SQLException ex) {
             Logger.getLogger(photoupload.class.getName()).log(Level.SEVERE, null, ex);
