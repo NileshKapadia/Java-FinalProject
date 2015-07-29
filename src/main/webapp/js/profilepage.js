@@ -70,14 +70,16 @@ alert('dflhdxfibhfi');
                   success: function (data, textStatus, jqXHR) {
                      alert(data);
                       //var base64_string = "/9j/4AAQSkZJRgABAgAAAQABAAD//...";
+                      
 var img = document.createElement("img");
-var OIMg=document.createElement(img);
-// added `width` , `height` properties to `img` attributes
-OIMg.width = "250px";
-OIMg.height = "250px";
-OIMg.src = "data:image/jpg;base64," + data;
-var preview = document.getElementById("img_preview");
-preview.appendChild(img);
+
+var oImg=document.createElement("img");
+var imsc = 'data:image/jpg;base64, ' + data;
+oImg.setAttribute('src', imsc);
+oImg.setAttribute('width', 100);
+oImg.setAttribute('height', 20);
+//document.body.appendChild(oImg);
+  $("#photo").append(oImg); 
                      
                       if(data==="done")
                       {
