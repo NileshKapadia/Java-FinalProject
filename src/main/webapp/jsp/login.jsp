@@ -116,23 +116,15 @@
                       %> 
                        <br><br><br>
                     <table>
-                        <tr>
-                            <td id="imagetd" rowspan="7"><img src="image.jsp?iid=<%=img_id%>" width="200" height="200"/><td>  
-
-                        </tr>
-                        <tr>
-                            <td><b>Name:  </b><%=caption%></td>
-                        </tr>
                         
-                    
-                    
-                    <form action="comment" method="post">
-                        <tr>
+                            <td id="imagetd" rowspan="7"><img src="image.jsp?iid=<%=img_id%>" width="200" height="200"/><td> 
+                            <td><b>caption:  </b><%=caption%></td>
+                        
+                        <form action="comment" method="post">
+                        
                             <td><input type="text" name="comment" id="comment"></td>
-                        </tr>
-                     <tr>
                             <td> <input type="submit" value="Post"></td>
-                        </tr>
+                       
                    
                     </form>
                     
