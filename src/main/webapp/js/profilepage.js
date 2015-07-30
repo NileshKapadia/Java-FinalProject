@@ -77,7 +77,7 @@ var oImg=document.createElement("img");
 var imsc = 'data:image/jpg;base64, ' + data;
 oImg.setAttribute('src', imsc);
 oImg.setAttribute('width', 700);
-oImg.setAttribute('height', 700);
+oImg.setAttribute('height', 600);
 //document.body.appendChild(oImg);
   $("#photo").append(oImg); 
                      
