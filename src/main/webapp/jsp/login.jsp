@@ -108,9 +108,9 @@
                                  String img_id = rs.getString("img_id");
                                 String username = rs.getString("username");
                                 String caption = rs.getString("caption");
-                        out.println(img_id);
+                       // out.println(img_id);
                                // out.println(username);
-                                 out.println(caption);
+                                 //out.println(caption);
                                  
   
             
@@ -118,12 +118,13 @@
                        <br><br><br>
                     <table>
                         
+                            
+                            <td><%=caption%></td>
                             <td id="imagetd" rowspan="7"><img src="../image.jsp?id=<%=img_id%>" width="200" height="200"/><td> 
-                            <td><b>caption:  </b><%=caption%></td>
                         
                         <form action="../image.jsp" method="post">
                             <tr>
-                            <td><input type="text" name="comment" id="comment"></td></tr>
+                                <td><input type="text" name="comment" id="comment"></td><br>
                             <tr><td> <input type="submit" value="Comment"></td></tr>
                       
                    
