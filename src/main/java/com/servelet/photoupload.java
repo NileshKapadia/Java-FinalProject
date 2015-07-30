@@ -146,8 +146,8 @@ response.setHeader("Expires", "-1");
       
         
        // pt.println(uploadimage);
-       // pt.println(caption1);
-         //pt.println(userid);
+        pt.println(caption1);
+         pt.println(userid);
         
         
         InputStream inputStream = null; // input stream of the upload file
