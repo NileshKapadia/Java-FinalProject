@@ -66,7 +66,13 @@
             <label for="caption">Image:
                 <input type="file" id="image" placeholder="Upload"></label><br>
                 <input type="submit" name="submit" id="reg" value="Upload">
-                <div id="photo"></div>
+                <div id="photo">
+                    <form action="comment" method="post">
+                    <input type="text" name="comment" id="comment">
+                    <input type="submit" value="Post">
+                    </form>
+                    
+                </div>
        
        <%
                        // if (session.getAttribute("username") == null ) {
