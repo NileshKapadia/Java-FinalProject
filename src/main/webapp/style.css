@@ -389,9 +389,9 @@ ol li .send {
 }
 .photoupload
 {
-    float:left;
+   
     align:center;
-    alignment-adjust: center;
-    border:2px solid black;
+     float:center;
+   border:2px solid black;
     
 }
