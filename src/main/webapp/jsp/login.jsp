@@ -105,28 +105,19 @@
                             
                             
                             while (rs.next()) {
-                                 String image_id = rs.getString("img_id");
+                                 String img_id = rs.getString("img_id");
                                 String username = rs.getString("username");
                                 String caption = rs.getString("caption");
                                 out.println(username);
                                  out.println(caption);
                                  
-                      Blob  b = rs.getBlob("photo");            
-            response.setContentType("image/jpeg");
-            response.setContentLength( (int) b.length());
-           // response.setContentLength(10);
-            InputStream is = b.getBinaryStream();
-            OutputStream os = response.getOutputStream();
-            byte buf[] = new byte[(int) b.length()];
-            is.read(buf);
-            
-           os.write(buf);
+  
             
                       %> 
                        <br><br><br>
                     <table>
                         <tr>
-                            <td id="imagetd" rowspan="7"><img src="image.jsp?iid=<%=image_id%>" width="200" height="200"/><td>  
+                            <td id="imagetd" rowspan="7"><img src="image.jsp?iid=<%=img_id%>" width="200" height="200"/><td>  
 
                         </tr>
                         <tr>
