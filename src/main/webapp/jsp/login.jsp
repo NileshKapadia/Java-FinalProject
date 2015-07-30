@@ -124,8 +124,8 @@
                         
                         <form action="../image.jsp" method="post">
                             
-                            <tr><td><input type="text" name="comment" id="comment"></td></tr>
-                            <tr><td> <input type="submit" value="Comment"></td></tr>
+                            <input type="text" name="comment" id="comment"><br>
+                             <input type="submit" value="Comment">
                         </form>
                       
                    
