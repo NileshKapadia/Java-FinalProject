@@ -20,7 +20,7 @@
     </head>
     <body>
          <%
-                //int img_id = Integer.parseInt(request.getParameter("id"));
+                int img_id = Integer.parseInt(request.getParameter("id"));
                %>
                
                
@@ -39,7 +39,7 @@
                 <h1>Success</h1>
                 <% 
                 Statement smt = conn.createStatement();
-                String query = "select photo from photoupload where img_id=2";
+                String query = "select photo from photoupload where img_id='"+img_id+"'";
                 ResultSet rs = smt.executeQuery(query);
                  while (rs.next()) {
                // String id = rs.getString("user_id");

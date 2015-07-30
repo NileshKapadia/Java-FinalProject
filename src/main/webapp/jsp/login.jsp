@@ -109,7 +109,7 @@
                                 String username = rs.getString("username");
                                 String caption = rs.getString("caption");
                         out.println(img_id);
-                                out.println(username);
+                               // out.println(username);
                                  out.println(caption);
                                  
   
@@ -123,9 +123,9 @@
                         
                         <form action="../image.jsp" method="post">
                             <tr>
-                            <td><input type="text" name="comment" id="comment"></td>
-                            <td> <input type="submit" value="Comment"></td></tr>
-                       <input type="submit" name="submit" value="<%=img_id%>">
+                            <td><input type="text" name="comment" id="comment"></td></tr>
+                            <tr><td> <input type="submit" value="Comment"></td></tr>
+                      
                    
                     </form>
                     
