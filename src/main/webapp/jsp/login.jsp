@@ -60,12 +60,13 @@
       </div>
        </div>
        
-           
+        <div class="photoupload">
             <label for="caption">Caption:
                 <input type="text" id="caption"></label></br>
             <label for="caption">Image:
                 <input type="file" id="image" placeholder="Upload"></label><br>
                 <input type="submit" name="submit" id="reg" value="Upload">
+        </div>
                 <div id="photo">
                     
                     <%
