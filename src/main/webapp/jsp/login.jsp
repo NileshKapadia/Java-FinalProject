@@ -75,9 +75,9 @@
 
 
                     <%
-                    } else {
+                    /*} else {
                       
-                     Connection conn=databaseconnection.getConnection();
+                    Connection conn=databaseconnection.getConnection();
                     //  PrintWriter out = response.getWriter();
                      
                         if (conn == null) {
@@ -102,7 +102,7 @@
                       Blob  b = rs.getBlob("photo");            
             response.setContentType("image/jpeg");
             response.setContentLength( (int) b.length());
-            response.setContentLength(10);
+           // response.setContentLength(10);
             InputStream is = b.getBinaryStream();
             OutputStream os = response.getOutputStream();
             byte buf[] = new byte[(int) b.length()];
@@ -113,8 +113,8 @@
                                 
                             }
                         }
-                       } 
-                    %>
+                       } */
+                    %> 
       
     </body>
 </html>
