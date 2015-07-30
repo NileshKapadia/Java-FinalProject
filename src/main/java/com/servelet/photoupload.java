@@ -17,10 +17,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import javax.json.Json;
-import javax.json.JsonArrayBuilder;
-import javax.json.JsonObjectBuilder;
-import javax.json.JsonValue;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.annotation.WebServlet;
@@ -145,9 +142,9 @@ response.setHeader("Expires", "-1");
         String userid =(String) session.getAttribute("username");
       
         
-        pt.println(uploadimage);
-        pt.println(caption1);
-         pt.println(userid);
+        //pt.println(uploadimage);
+        //pt.println(caption1);
+         //pt.println(userid);
         
         
         InputStream inputStream = null; // input stream of the upload file
@@ -158,7 +155,7 @@ response.setHeader("Expires", "-1");
             
            
            inputStream = filePart.getInputStream();
-           pt.println(inputStream);
+           //pt.println(inputStream);
        }
        
        
@@ -186,6 +183,13 @@ response.setHeader("Expires", "-1");
 
            // sends the statement to the database server
           int row = statement.executeUpdate();
+          
+           if (row > 0) {
+               
+                HttpSession  success_ad = request.getSession(true);
+                success_ad.setAttribute("success_message","Your Ad is posted successfully!");
+                response.sendRedirect("jsp/login.jsp");
+           }
           
           
           

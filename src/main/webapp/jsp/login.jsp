@@ -69,7 +69,7 @@
                 <input type="submit" name="submit" value="Upload">
             </form>
         </div>
-                <div id="photo">
+                <!--<div id="photo">
                     
                     
                     <form action="comment" method="post">
@@ -77,16 +77,16 @@
                     <input type="submit" value="Post">
                     </form>
                     
-                </div>
+                </div>-->
        
        <%
-                       // if (session.getAttribute("username") == null ) {
+                        if (session.getAttribute("username") == null ) {
                     %>
 
 
 
                     <%
-                    /*} else {
+                    } else {
                       
                     Connection conn=databaseconnection.getConnection();
                     //  PrintWriter out = response.getWriter();
@@ -124,7 +124,7 @@
                                 
                             }
                         }
-                       } */
+                       } 
                     %> 
       
     </body>
