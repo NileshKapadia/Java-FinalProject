@@ -20,7 +20,12 @@
     </head>
     <body>
          <%
-                int img_id = Integer.parseInt(request.getParameter("iid"));
+                int img_id = Integer.parseInt(request.getParameter("id"));
+               %>
+               <%=img_id%>
+               
+               <%
+                
                 Connection conn = databaseconnection.getConnection();
                 
                 if(conn==null)
@@ -34,7 +39,7 @@
                 <h1>Success</h1>
                 <% 
                 Statement smt = conn.createStatement();
-                String query = "select * from photoupload";
+                String query = "select photo from photoupload where img_id='"+img_id+"'";
                 ResultSet rs = smt.executeQuery(query);
                  while (rs.next()) {
                // String id = rs.getString("user_id");
@@ -59,6 +64,7 @@
             <%
                 os.close();
                  }
+                  response.sendRedirect("jsp/login.jsp");
                 }
             %>  
     </body>
