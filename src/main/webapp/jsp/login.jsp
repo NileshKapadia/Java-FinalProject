@@ -123,12 +123,17 @@
                         <tr>
                             <td><b>Name:  </b><%=caption%></td>
                         </tr>
-                        <div id="photo">
+                        
                     
                     
                     <form action="comment" method="post">
-                    <input type="text" name="comment" id="comment">
-                    <input type="submit" value="Post">
+                        <tr>
+                            <td><input type="text" name="comment" id="comment"></td>
+                        </tr>
+                     <tr>
+                            <td> <input type="submit" value="Post"></td>
+                        </tr>
+                   
                     </form>
                     
                 </div>
