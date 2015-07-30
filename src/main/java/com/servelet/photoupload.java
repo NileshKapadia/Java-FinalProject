@@ -113,6 +113,7 @@ response.setHeader("Expires", "-1");
             
             String img = array.build().toString();
             
+            
             pt.write(img);
         } catch (SQLException ex) {
                         PrintWriter pt = response.getWriter();
@@ -120,6 +121,7 @@ response.setHeader("Expires", "-1");
             pt.write("in cache get");
             //.getLogger(photoupload.class.getName()).log(Level.SEVERE, null, ex);
         }
+    
        
           
        } 
