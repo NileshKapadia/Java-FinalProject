@@ -131,9 +131,9 @@ response.setHeader("Expires", "-1");
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
        
-response.setHeader("Cache-control", "no-cache, no-store");
-response.setHeader("Pragma", "no-cache");
-response.setHeader("Expires", "-1");
+//response.setHeader("Cache-control", "no-cache, no-store");
+//response.setHeader("Pragma", "no-cache");
+//response.setHeader("Expires", "-1");
         PrintWriter pt = response.getWriter();
         
         
@@ -155,10 +155,6 @@ response.setHeader("Expires", "-1");
       
        Part filePart = request.getPart("image");
        if (filePart != null) {
-           
-           // pt.println(filePart.getName());
-          // pt.println(filePart.getSize());
-          // pt.println(filePart.getContentType());
             
            
            inputStream = filePart.getInputStream();
@@ -201,10 +197,6 @@ response.setHeader("Expires", "-1");
            
  }
 
-    private void add(JsonObjectBuilder build) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-    
    
     
 }          
