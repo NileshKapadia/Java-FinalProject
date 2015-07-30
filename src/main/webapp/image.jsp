@@ -39,14 +39,14 @@
                 <h1>Success</h1>
                 <% 
                 Statement smt = conn.createStatement();
-                String query = "select photo from photoupload where img_id='"+img_id+"'";
+                String query = "select photo from photoupload where img_id=2";
                 ResultSet rs = smt.executeQuery(query);
                  while (rs.next()) {
                // String id = rs.getString("user_id");
                 
                   Blob  b = rs.getBlob("image");            
-            response.setContentType("image/jpeg");
-            response.setContentLength( (int) b.length());
+                response.setContentType("image/jpeg");
+                response.setContentLength( (int) b.length());
            // response.setContentLength(10);
             InputStream is = b.getBinaryStream();
             OutputStream os = response.getOutputStream();
