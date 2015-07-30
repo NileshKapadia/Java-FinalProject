@@ -66,21 +66,17 @@
                 <input type="text" id="caption"></label></br>
             <label for="caption">Image:
                 <input type="file" id="image" placeholder="Upload"></label><br>
-                <input type="submit" name="submit" id="reg" value="Upload">
+                <input type="submit" name="submit" value="Upload">
             </form>
         </div>
                 <div id="photo">
                     
-                    <%
-                         if (session.getAttribute("base4String") != null)
-                        {
-                                %>
+                    
                     <form action="comment" method="post">
                     <input type="text" name="comment" id="comment">
                     <input type="submit" value="Post">
                     </form>
-                    <%  }
-                        %>
+                    
                 </div>
        
        <%
