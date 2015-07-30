@@ -378,3 +378,12 @@ ol li .send {
 	font-size:0;
 	line-height:0;
 }
+
+#photo
+{
+    height: 150px;
+    width: 150px;
+   
+    float:left;
+    
+}
