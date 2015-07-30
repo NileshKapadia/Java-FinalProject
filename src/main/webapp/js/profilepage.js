@@ -8,7 +8,7 @@ $(document).ready(function(){
 
 $("#reg").click(function (e) {
        e.preventDefault();
-alert('dflhdxfibhfi');
+//alert('dflhdxfibhfi');
        var imgvalid = false;
        var formURL = "/photoupload";
        //var data = $("#myform").serialize();
@@ -49,7 +49,7 @@ alert('dflhdxfibhfi');
            alert('username field cannot be empty');
        }
        else {
-           alert("in else");
+           //alert("in else");
            $.ajax({
                   url: formURL,
                   method: "POST",
@@ -59,7 +59,7 @@ alert('dflhdxfibhfi');
                   cache: false,
                   //processData: false,
                   success: function (data, textStatus, jqXHR) {
-                      alert("post done");
+                     // alert("post done");
                      alert(data);
                      
                       $.ajax({
@@ -68,7 +68,7 @@ alert('dflhdxfibhfi');
                  
                   //processData: false,
                   success: function (data, textStatus, jqXHR) {
-                     alert(data);
+                     //alert(data);
                       //var base64_string = "/9j/4AAQSkZJRgABAgAAAQABAAD//...";
                       
 var img = document.createElement("img");

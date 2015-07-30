@@ -99,7 +99,7 @@
                                 out.println(username);
                                  out.println(caption);
                                  
-                    /*  Blob  b = rs.getBlob("image");            
+                      Blob  b = rs.getBlob("photo");            
             response.setContentType("image/jpeg");
             response.setContentLength( (int) b.length());
            // response.setContentLength(10);
@@ -108,7 +108,7 @@
             byte buf[] = new byte[(int) b.length()];
             is.read(buf);
             
-           os.write(buf);*/
+           os.write(buf);
             
                                 
                             }
