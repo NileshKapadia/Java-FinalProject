@@ -73,11 +73,15 @@ response.setHeader("Expires", "-1");
                     try {
                         a1 = stream.read();
                     } catch (IOException ex) {
-                     pt.write("cant write array");
+                    // pt.write("cant write array");
                     }
                 }
                 byte[] dt = new byte[166666];
                String base64String = DatatypeConverter.printBase64Binary(output.toByteArray());
+               HttpSession session=request.getSession();
+               String base4String =(String) session.getAttribute("base64String");
+               
+               
                 //pt.write(base64String);
                // pt.write("rfhrfjtykhjfjyukjtyjgjk,uimhgjgykutju");
             }
@@ -106,7 +110,7 @@ response.setHeader("Expires", "-1");
         
         String caption1=request.getParameter("caption");
          
-               HttpSession session = request.getSession();
+          HttpSession session = request.getSession();
         String userid =(String) session.getAttribute("username");
       
         

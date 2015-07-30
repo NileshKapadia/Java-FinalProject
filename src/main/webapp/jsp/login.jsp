@@ -67,11 +67,17 @@
                 <input type="file" id="image" placeholder="Upload"></label><br>
                 <input type="submit" name="submit" id="reg" value="Upload">
                 <div id="photo">
+                    
+                    <%
+                        if(session.getAttribute("base4String" !== null))
+                        {
+                                %>
                     <form action="comment" method="post">
                     <input type="text" name="comment" id="comment">
                     <input type="submit" value="Post">
                     </form>
-                    
+                    <%  }
+                        %>
                 </div>
        
        <%
