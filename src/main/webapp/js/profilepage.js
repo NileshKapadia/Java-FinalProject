@@ -69,6 +69,7 @@ $("#reg").click(function (e) {
                   //processData: false,
                   success: function (data, textStatus, jqXHR) {
                      alert(data);
+                     console.log(data);
                       //var base64_string = "/9j/4AAQSkZJRgABAgAAAQABAAD//...";
                       
 var img = document.createElement("img");

@@ -17,6 +17,10 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.json.Json;
+import javax.json.JsonArrayBuilder;
+import javax.json.JsonObjectBuilder;
+import javax.json.JsonValue;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.annotation.WebServlet;
@@ -34,7 +38,13 @@ import javax.xml.bind.DatatypeConverter;
 @WebServlet(name = "photoupload", urlPatterns = {"/photoupload"})
 @MultipartConfig(maxFileSize = 16177215)
 public class photoupload extends HttpServlet {
-    private Object Json;
+    
+    
+JsonArrayBuilder array = Json.createArrayBuilder();
+   
+    
+    
+    
      @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException 
@@ -53,7 +63,7 @@ response.setHeader("Expires", "-1");
             ResultSet rs = statement.executeQuery(imagequery);
             int count = 0;
             int a1= 0;
-         //   String base64String="";
+           String base64String="";
             
             
             while (rs.next()) {
@@ -77,14 +87,33 @@ response.setHeader("Expires", "-1");
                     }
                 }
                 byte[] dt = new byte[166666];
-               String base64String = DatatypeConverter.printBase64Binary(output.toByteArray());
+                base64String = DatatypeConverter.printBase64Binary(output.toByteArray());
                HttpSession session=request.getSession();
                String base4String =(String) session.getAttribute("base64String");
                
                
                 pt.write(base64String);
+                
+                 if (count == 0) 
+                 {
+              
+                    base64String = "images/icon.png";
+                    
+              JsonObjectBuilder build = Json.createObjectBuilder().add("image", base64String);
+
+                 array.add(build);
+               
+               //return "did not read image from data base";
+
+           }
+
+       
                // pt.write("rfhrfjtykhjfjyukjtyjgjk,uimhgjgykutju");
             }
+            
+            String img = array.build().toString();
+            
+            pt.write(img);
         } catch (SQLException ex) {
                         PrintWriter pt = response.getWriter();
 
@@ -169,6 +198,10 @@ response.setHeader("Expires", "-1");
            
            
  }
+
+    private void add(JsonObjectBuilder build) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
    
     
