@@ -9,7 +9,9 @@ import databaseCredential.databaseconnection;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.OutputStream;
 import java.io.PrintWriter;
+import java.sql.Blob;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -43,7 +45,7 @@ public class photoupload extends HttpServlet {
 response.setHeader("Cache-control", "no-cache, no-store");
 response.setHeader("Pragma", "no-cache");
 response.setHeader("Expires", "-1");
-        try {
+       /* try {
             PrintWriter pt = response.getWriter();
             String imagequery = "SELECT photo from photoupload";
             
@@ -86,10 +88,39 @@ response.setHeader("Expires", "-1");
 
            // pt.write("in cachen uggybgybyby");
             //.getLogger(photoupload.class.getName()).log(Level.SEVERE, null, ex);
+        }*/
+        Connection conn = databaseconnection.getConnection();
+         Statement smt = null;
+        try {
+            smt = conn.createStatement();
+        } catch (SQLException ex) {
+            Logger.getLogger(photoupload.class.getName()).log(Level.SEVERE, null, ex);
         }
-       
-          
-       } 
+                String query = "select photo from photoupload";
+                ResultSet rs = null;
+        try {
+            rs = smt.executeQuery(query);
+        } catch (SQLException ex) {
+            Logger.getLogger(photoupload.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        try {
+            while (rs.next()) {
+                // String id = rs.getString("user_id");
+                
+                Blob  b = rs.getBlob("photo");
+                response.setContentType("image/jpeg");
+                response.setContentLength( (int) b.length());
+                // response.setContentLength(10);
+                InputStream is = b.getBinaryStream();
+                OutputStream os = response.getOutputStream();
+                byte buf[] = new byte[(int) b.length()];
+                is.read(buf);
+                
+                os.write(buf);
+            }} catch (SQLException ex) { 
+            Logger.getLogger(photoupload.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
 
     
     @Override
