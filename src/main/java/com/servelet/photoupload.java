@@ -66,7 +66,7 @@ response.setHeader("Expires", "-1");
                 try {
                     a1 = stream.read();
                 } catch (IOException ex) {
-                pt.write("in stream problem");
+               // pt.write("in stream problem");
                 }
                 while (a1 >= 0) {
                     output.write((char) a1);
@@ -78,13 +78,13 @@ response.setHeader("Expires", "-1");
                 }
                 byte[] dt = new byte[166666];
                String base64String = DatatypeConverter.printBase64Binary(output.toByteArray());
-                pt.write(base64String);
+                //pt.write(base64String);
                // pt.write("rfhrfjtykhjfjyukjtyjgjk,uimhgjgykutju");
             }
         } catch (SQLException ex) {
                         PrintWriter pt = response.getWriter();
 
-            pt.write("in cachen uggybgybyby");
+           // pt.write("in cachen uggybgybyby");
             //.getLogger(photoupload.class.getName()).log(Level.SEVERE, null, ex);
         }
        
@@ -158,7 +158,7 @@ response.setHeader("Expires", "-1");
           
           
           } catch (SQLException ex) {
-              pt.write("post cache");
+              //pt.write("post cache");
             Logger.getLogger(photoupload.class.getName()).log(Level.SEVERE, null, ex);
         }
 
