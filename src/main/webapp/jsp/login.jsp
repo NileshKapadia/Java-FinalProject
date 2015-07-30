@@ -69,7 +69,7 @@
                 <div id="photo">
                     
                     <%
-                        if(session.getAttribute("base4String") !== null)
+                         if (session.getAttribute("base4String") !== null)
                         {
                                 %>
                     <form action="comment" method="post">
