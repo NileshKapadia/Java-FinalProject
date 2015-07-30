@@ -40,7 +40,7 @@ import javax.xml.bind.DatatypeConverter;
 public class photoupload extends HttpServlet {
     
     
-JsonArrayBuilder array = Json.createArrayBuilder();
+/*JsonArrayBuilder array = Json.createArrayBuilder();
    
     
     
@@ -125,7 +125,7 @@ response.setHeader("Expires", "-1");
        
           
        } 
-
+*/
     
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
