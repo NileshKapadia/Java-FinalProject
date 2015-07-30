@@ -69,7 +69,7 @@
                 <div id="photo"></div>
        
        <%
-                        if (session.getAttribute("username") == null ) {
+                       // if (session.getAttribute("username") == null ) {
                     %>
 
 
