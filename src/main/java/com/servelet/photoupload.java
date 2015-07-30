@@ -137,7 +137,7 @@ response.setHeader("Expires", "-1");
         PrintWriter pt = response.getWriter();
         
         
-        //String uploadimage=request.getParameter("image");
+        String uploadimage=request.getParameter("image");
         
         String caption1=request.getParameter("caption");
          
@@ -145,7 +145,7 @@ response.setHeader("Expires", "-1");
         String userid =(String) session.getAttribute("username");
       
         
-       // pt.println(uploadimage);
+        pt.println(uploadimage);
         pt.println(caption1);
          pt.println(userid);
         
