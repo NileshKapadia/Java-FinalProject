@@ -123,9 +123,10 @@
                         <tr><td id="imagetd" rowspan="7"><img src="../image.jsp?id=<%=img_id%>" width="200" height="200"/><td> </tr>
                         
                         <form action="../image.jsp" method="post">
-                            
+                            <table>
                             <tr><td><input type="text" name="comment" id="comment"></td></tr>
                             <tr>  <td> <input type="submit" value="Comment"></td></tr>
+                            </table
                         </form>
                       
                    
