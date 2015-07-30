@@ -390,8 +390,10 @@ ol li .send {
 .photoupload
 {
    
-    align:center;
-     float:center;
-   border:2px solid black;
+    
+     margin-left: 100px
+     height: 150px;
+    width: 150px;
+   //border:2px solid black;
     
 }
