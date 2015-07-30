@@ -44,7 +44,7 @@
                  while (rs.next()) {
                // String id = rs.getString("user_id");
                 
-                  Blob  b = rs.getBlob("image");            
+                  Blob  b = rs.getBlob("photo");            
                 response.setContentType("image/jpeg");
                 response.setContentLength( (int) b.length());
            // response.setContentLength(10);
