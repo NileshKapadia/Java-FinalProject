@@ -390,6 +390,7 @@ ol li .send {
 .photoupload
 {
     float:left;
+    Align:center;
     border:2px solid black;
     
 }
