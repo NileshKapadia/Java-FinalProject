@@ -29,7 +29,7 @@
 
 
     </head>
-    <body>
+    
         
         
         <div class="main">  
@@ -105,6 +105,7 @@
                             
                             
                             while (rs.next()) {
+                                 String image_id = rs.getString("img_id");
                                 String username = rs.getString("username");
                                 String caption = rs.getString("caption");
                                 out.println(username);
@@ -121,11 +122,35 @@
             
            os.write(buf);
             
-                                
+                      %> 
+                       <br><br><br>
+                    <table>
+                        <tr>
+                            <td id="imagetd" rowspan="7"><img src="img.jsp?iid=<%=image_id%>" width="200" height="200"/><td>  
+
+                        </tr>
+                        <tr>
+                            <td><b>Name:  </b><%=caption%></td>
+                        </tr>
+                        <div id="photo">
+                    
+                    
+                    <form action="comment" method="post">
+                    <input type="text" name="comment" id="comment">
+                    <input type="submit" value="Post">
+                    </form>
+                    
+                </div>
+                       
+                    </table>
+
+                    <%
+                           
+                           
                             }
                         }
                        } 
                     %> 
       
-    </body>
+    
 </html>
