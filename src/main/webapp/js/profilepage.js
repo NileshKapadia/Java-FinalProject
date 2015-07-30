@@ -41,12 +41,12 @@ $("#reg").click(function (e) {
 
        if (imgvalid !== true)
        {
-           alert('plaese emter the right image');
+           //alert('plaese emter the right image');
        }
     
        else if (name === "")
        {
-           alert('username field cannot be empty');
+           //alert('username field cannot be empty');
        }
        else {
            //alert("in else");
@@ -60,7 +60,7 @@ $("#reg").click(function (e) {
                   //processData: false,
                   success: function (data, textStatus, jqXHR) {
                      // alert("post done");
-                     alert(data);
+                     //alert(data);
                      
                       $.ajax({
                   url: formURL,
@@ -83,7 +83,7 @@ oImg.setAttribute('height', 400);
                      
                       if(data==="done")
                       {
-                          alert('Your Image has been Uploaded');
+                          //alert('Your Image has been Uploaded');
                       }
                       },
                         error: function(jqxhr, status, errorMsg) {
@@ -93,7 +93,7 @@ oImg.setAttribute('height', 400);
               });
                       if(data==="done")
                       {
-                          alert('Your Image has been Uploaded');
+                          //alert('Your Image has been Uploaded');
                       }
                       },
                         error: function(jqxhr, status, errorMsg) {
