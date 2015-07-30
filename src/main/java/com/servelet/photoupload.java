@@ -158,6 +158,7 @@ response.setHeader("Expires", "-1");
             
            
            inputStream = filePart.getInputStream();
+           pt.println(inputStream);
        }
        
        
