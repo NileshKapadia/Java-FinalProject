@@ -126,7 +126,7 @@
                        <br><br><br>
                     <table>
                         <tr>
-                            <td id="imagetd" rowspan="7"><img src="img.jsp?iid=<%=image_id%>" width="200" height="200"/><td>  
+                            <td id="imagetd" rowspan="7"><img src="image.jsp?iid=<%=image_id%>" width="200" height="200"/><td>  
 
                         </tr>
                         <tr>
