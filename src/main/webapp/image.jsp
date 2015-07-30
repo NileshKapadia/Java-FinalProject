@@ -64,7 +64,7 @@
             <%
                 os.close();
                  }
-                  response.sendRedirect("jsp/login.jsp");
+                  
                 }
             %>  
     </body>
