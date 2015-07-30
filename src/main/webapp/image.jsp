@@ -20,9 +20,9 @@
     </head>
     <body>
          <%
-                int img_id = Integer.parseInt(request.getParameter("id"));
+                //int img_id = Integer.parseInt(request.getParameter("id"));
                %>
-               <%=img_id%>
+               
                
                <%
                 
