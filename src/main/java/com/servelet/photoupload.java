@@ -114,7 +114,7 @@ response.setHeader("Expires", "-1");
             String img = array.build().toString();
             
             
-            pt.println(img);
+            pt.write(img);
         } catch (SQLException ex) {
                         PrintWriter pt = response.getWriter();
 
