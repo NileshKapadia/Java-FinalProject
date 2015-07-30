@@ -63,9 +63,9 @@
         <div class="photoupload">
             <form action="/photoupload" method="post" enctype="multipart/form-data">
             <label for="caption">Caption:
-                <input type="text" id="caption"></label></br>
+                <input type="text" id="caption" name="caprion"></label></br>
             <label for="caption">Image:
-                <input type="file" id="image" placeholder="Upload"></label><br>
+                <input type="file" id="image" placeholder="Upload" name="image"></label><br>
                 <input type="submit" name="submit" value="Upload">
             </form>
         </div>
