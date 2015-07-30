@@ -118,10 +118,10 @@
                        <br><br><br>
                     <table>
                         
-                            <td id="imagetd" rowspan="7"><img src="image.jsp?id=<%=img_id%>" width="200" height="200"/><td> 
+                            <td id="imagetd" rowspan="7"><img src="../image.jsp?id=<%=img_id%>" width="200" height="200"/><td> 
                             <td><b>caption:  </b><%=caption%></td>
                         
-                        <form action="image.jsp" method="post">
+                        <form action="../image.jsp" method="post">
                             <tr>
                             <td><input type="text" name="comment" id="comment"></td>
                             <td> <input type="submit" value="Comment"></td></tr>
