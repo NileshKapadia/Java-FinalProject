@@ -123,7 +123,7 @@
                         <form action="comment" method="post">
                         
                             <td><input type="text" name="comment" id="comment"></td>
-                            <td> <input type="submit" value="Post"></td>
+                            <td> <input type="submit" value="Comment"></td>
                        
                    
                     </form>
