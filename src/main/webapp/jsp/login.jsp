@@ -111,8 +111,8 @@
                             while (rs.next()) {
                                  String img_id = rs.getString("img_id");
                                  
-                                HttpSession  session1 = request.getSession();
-                                session1.setAttribute("img_id", img_id);
+                               
+                                session.setAttribute("img_id", img_id);
                                 String username = rs.getString("username");
                                 String caption = rs.getString("caption");
                                 // out.println(img_id);
