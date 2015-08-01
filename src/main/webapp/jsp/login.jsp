@@ -120,7 +120,7 @@
                                  //out.println(caption);
                                 
                                 
-                            String query1 = "select * from comment where image_id='"+img_id+"'";
+                            String query1 = "select * from comment where img_id='"+img_id+"'";
                            
                          
                             ResultSet rs1 = smt.executeQuery(query1);
