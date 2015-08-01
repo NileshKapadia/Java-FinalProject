@@ -109,10 +109,7 @@
                             
                             
                             while (rs.next()) {
-                                 String img_id = rs.getString("img_id");
-                                 
-                               
-                                
+                                 String img_id1 = rs.getString("img_id");
                                 String username = rs.getString("username");
                                 String caption = rs.getString("caption");
                                 // out.println(img_id);
@@ -120,7 +117,7 @@
                                  //out.println(caption);
                                 
                                 
-                            String query1 = "select * from comment where img_id='"+img_id+"'";
+                            String query1 = "select * from comment where img_id='"+img_id1+"'";
                            
                          
                             ResultSet rs1 = smt.executeQuery(query1);
@@ -136,11 +133,11 @@
                         
                             
                         <tr> <td><%=caption%></td></tr>
-                        <tr><td id="imagetd" rowspan="7"><img src="../image.jsp?id=<%=img_id%>" width="200" height="200"/><td> </tr>
+                        <tr><td id="imagetd" rowspan="7"><img src="../image.jsp?id=<%=img_id1%>" width="200" height="200"/><td> </tr>
                         <tr><td><%=comment1%> </td></tr>
                         <form action="/comment" method="get">
                             <table>
-                                <input type="hidden" name="image_id" value="<%=img_id%>">
+                                <input type="hidden" name="image_id" value="<%=img_id1%>">
                             <tr><td><input type="text" name="comment" id="comment"></td></tr>
                             <tr>  <td> <input type="submit" value="Comment"></td></tr>
                             </table
