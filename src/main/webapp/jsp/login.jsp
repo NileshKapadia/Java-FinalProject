@@ -123,11 +123,11 @@
                             String query1 = "select * from comment where image_id='"+img_id+"'";
                            
                          
-                            ResultSet rs1 = smt.executeQuery(query);
+                            ResultSet rs1 = smt.executeQuery(query1);
                                  
                             while(rs1.next()){
                                 
-                                String comment = rs1.getString("comment");
+                                String comment1 = rs1.getString("comment");
                             
             
                       %> 
@@ -137,7 +137,7 @@
                             
                         <tr> <td><%=caption%></td></tr>
                         <tr><td id="imagetd" rowspan="7"><img src="../image.jsp?id=<%=img_id%>" width="200" height="200"/><td> </tr>
-                        <tr><td><%=comment%> </td></tr>
+                        <tr><td><%=comment1%> </td></tr>
                         <form action="/comment" method="get">
                             <table>
                             <tr><td><input type="text" name="comment" id="comment"></td></tr>
