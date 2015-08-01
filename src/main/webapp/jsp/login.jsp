@@ -148,60 +148,7 @@
                        } 
                     %> 
                     
-                      <%
-                        if (session.getAttribute("username") == null ) {
-                    %>
-
-
-
-                    <%
-                    } else {
-                      
-                    Connection conn=databaseconnection.getConnection();
-                    //  PrintWriter out = response.getWriter();
-                     
-                        if (conn == null) {
-                            out.println("success");
-                        }
-                        
-                         else 
-                        {
-                           
-                            Statement smt = conn.createStatement();
-                            
-                             String query2 = "select * from comment ";
-                             ResultSet rs = smt.executeQuery(query2);
-                            
-                          
-                            
-                            
-                            
-                            while (rs.next()) {
-                                  
-                            String comments = rs.getString("comment");
-                            out.println(comments);
-                                 
-  
-            
-                      %> 
-                       <br><br><br><br>
-                       <table>
-                        
-                            
-                        <tr> <td><%=comments%></td></tr>
-                        
-                </table>
-
-                    <%
-                           
-                             
-                            }
-                            
-                        }
-                       
-                       } 
-                    %> 
-      
+                    
       
     
 </html>
