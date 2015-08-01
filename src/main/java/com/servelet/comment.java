@@ -18,6 +18,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  *
@@ -62,6 +63,9 @@ public class comment extends HttpServlet {
         PrintWriter pt = response.getWriter();
 
         String comment = request.getParameter("comment");
+        
+        HttpSession  session = request.getSession();
+        String image_id=(String) session.getAttribute("img_id");
 
         pt.println(comment);
 
@@ -70,8 +74,8 @@ public class comment extends HttpServlet {
         try {
             smt = conn.createStatement();
 
-            String sql = "INSERT INTO comment(comment) "
-                    + "VALUES ('" + comment + "')";
+            String sql = "INSERT INTO comment(img_id , comment) "
+                    + "VALUES ('" + image_id + "' , '" + comment + "')";
 
             smt.executeUpdate(sql);
 
