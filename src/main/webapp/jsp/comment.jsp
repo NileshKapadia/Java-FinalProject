@@ -66,7 +66,7 @@
                            
                              
                             }
-                            response.sendRedirect("jsp/login.jsp");
+                            response.sendRedirect("login.jsp");
                         }
                        
                        } 
