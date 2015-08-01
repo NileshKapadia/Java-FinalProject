@@ -64,10 +64,10 @@
 
                     <%
                            
-                           
+                             response.sendRedirect("jsp/login.jsp");
                             }
                         }
-                         response.sendRedirect("jsp/login.jsp");
+                       
                        } 
                     %> 
       

@@ -100,12 +100,11 @@
                            
                             Statement smt = conn.createStatement();
                             String query = "select * from photoupload ";
-                             String query2 = "select * from comment ";
-                             ResultSet rs1 = smt.executeQuery(query2);
+                           
+                         
                             ResultSet rs = smt.executeQuery(query);
                             
-                            String comments = rs1.getString("comment");
-                            out.println(comments);
+                          
                             
                             
                             
