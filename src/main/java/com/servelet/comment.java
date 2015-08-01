@@ -63,9 +63,9 @@ public class comment extends HttpServlet {
         PrintWriter pt = response.getWriter();
 
         String comment = request.getParameter("comment");
+        String image_id = request.getParameter("image_id");
         
-        HttpSession  session = request.getSession();
-        String image_id=(String) session.getAttribute("img_id");
+        
 
         pt.println(comment);
 

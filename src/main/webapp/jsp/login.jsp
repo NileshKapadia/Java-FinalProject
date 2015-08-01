@@ -112,7 +112,7 @@
                                  String img_id = rs.getString("img_id");
                                  
                                
-                                session.setAttribute("img_id", img_id);
+                                
                                 String username = rs.getString("username");
                                 String caption = rs.getString("caption");
                                 // out.println(img_id);
@@ -140,6 +140,7 @@
                         <tr><td><%=comment1%> </td></tr>
                         <form action="/comment" method="get">
                             <table>
+                                <input type="hidden" name="image_id" value="<%=img_id%>">
                             <tr><td><input type="text" name="comment" id="comment"></td></tr>
                             <tr>  <td> <input type="submit" value="Comment"></td></tr>
                             </table
