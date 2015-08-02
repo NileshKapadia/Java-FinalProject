@@ -27,7 +27,13 @@
 <script src="http://code.jquery.com/jquery.min.js"></script>
 <script type="text/javascript" src="../js/profilepage.js"></script>
 
-
+<script type="text/javascript">
+    function codeAddress()[
+        var string="You have liked this photo";
+        var label=document.getElementById("liked").innerText=string;
+        
+    ]
+</script>
     </head>
     
         
@@ -157,14 +163,16 @@
                             </table>
                       
                       </form>
-                              
+                              <form action="/like" method="get">
                             <table>
                             <input type="hidden" name="image_id" value="<%=img_id%>">
-                           
-                            <tr>  <td> <input type="submit" value="Like" id="lik"></td></tr>
+                           <input type="hidden" id="lat" name="lat" value="" /><br>
+                           <label name="liked" id="liked"></label>
+                            <tr>  <td> <input type="submit" value="Like" id="lik" onclick="codeAddress()"/></td></tr>
                             </table>
                       
-                                     
+                      </form>
+                   
                     
                     
                 </div>
