@@ -137,7 +137,8 @@
                                 
                                 String comment1 = rs1.getString("comment");
                                  %>
-                            <tr><td><%=comment1%> </td></tr>
+                                 <table>
+                                     <tr><td><%=comment1%> </td></tr></table>
                             <%
                             }
 
