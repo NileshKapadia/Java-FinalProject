@@ -84,7 +84,7 @@
                     %>
 
 
- <form action="/comment" method="get">
+ 
                     <%
                     } else {
                       
@@ -148,14 +148,14 @@
                                       
                         
                        
-                       
+                            <form action="/comment" method="get">
                             <table>
                             <input type="hidden" name="image_id" value="<%=img_id%>">
                             <tr><td><input type="text" name="comment" value=""></td></tr>
                             <tr>  <td> <input type="submit" value="Comment"></td></tr>
                             </table>
                       
-                      
+                      </form>
                    
                     
                     
@@ -173,5 +173,5 @@
                     
                     
       
-      </form>
+      
 </html>
