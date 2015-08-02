@@ -68,23 +68,23 @@ public class comment extends HttpServlet {
         
 
         pt.println(comment);
-
-        Connection conn = databaseconnection.getConnection();
-        Statement smt;
-        try {
-            smt = conn.createStatement();
-
-            String sql = "INSERT INTO comment(img_id , comment) "
-                    + "VALUES ('" + image_id + "' , '" + comment + "')";
-
-            smt.executeUpdate(sql);
-
-            response.sendRedirect("jsp/login.jsp");
-
-        } catch (SQLException ex) {
-            Logger.getLogger(sigup.class.getName()).log(Level.SEVERE, null, ex);
-
-        }
+pt.println(image_id);
+//        Connection conn = databaseconnection.getConnection();
+//        Statement smt;
+//        try {
+//            smt = conn.createStatement();
+//
+//            String sql = "INSERT INTO comment(img_id , comment) "
+//                    + "VALUES ('" + image_id + "' , '" + comment + "')";
+//
+//            smt.executeUpdate(sql);
+//
+//            response.sendRedirect("jsp/login.jsp");
+//
+//        } catch (SQLException ex) {
+//            Logger.getLogger(sigup.class.getName()).log(Level.SEVERE, null, ex);
+//
+//        }
     }
 
 }
