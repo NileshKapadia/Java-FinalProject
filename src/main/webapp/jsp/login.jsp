@@ -161,7 +161,7 @@
                             <table>
                             <input type="hidden" name="image_id" value="<%=img_id%>">
                            
-                            <tr>  <td> <input type="submit" value="Like"></td></tr>
+                            <tr>  <td> <input type="submit" value="Like" id="lik"></td></tr>
                             </table>
                       
                       </form>

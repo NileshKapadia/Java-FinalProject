@@ -110,6 +110,9 @@ oImg.setAttribute('height', 250);
 
  
    });
+   $("#lik").click(function(e){
+       alert('dfgbkhdgui');
+   });
    });
 
 
