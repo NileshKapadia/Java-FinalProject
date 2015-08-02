@@ -63,7 +63,7 @@ public class comment extends HttpServlet {
         PrintWriter pt = response.getWriter();
 
         String comment = request.getParameter("comment");
-        String image_id = request.getParameter("img_id");
+        String image_id = request.getParameter("image_id");
         
         
 
