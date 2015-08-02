@@ -84,7 +84,7 @@
                     %>
 
 
-
+ <form action="/comment" method="get">
                     <%
                     } else {
                       
@@ -125,7 +125,7 @@
                             
                         <tr> <td><%=caption%></td></tr>
                         <tr><td id="imagetd" rowspan="7"><img src="../image.jsp?id=<%=img_id%>" width="200" height="200"/><td> </tr>
-                       
+                       <td>
                        <%
                              
                        Statement smt1 = conn.createStatement();
@@ -145,17 +145,16 @@
                        %> 
                         
                         
-                        
-                        
+                                      
                         
                        
-                        <form action="/comment" method="get">
+                       
                             <table>
-                                <input type="hidden" name="image_id" value="<%=img_id%>">
-                            <tr><td><input type="text" name="comment" id="comment"></td></tr>
+                            <input type="hidden" name="image_id" value="<%=img_id%>">
+                            <tr><td><input type="text" name="comment" value=""></td></tr>
                             <tr>  <td> <input type="submit" value="Comment"></td></tr>
-                            </table
-                        </form>
+                            </table>
+                      
                       
                    
                     
@@ -174,5 +173,5 @@
                     
                     
       
-    
+      </form>
 </html>
