@@ -28,12 +28,12 @@
 <script type="text/javascript" src="../js/profilepage.js"></script>
 
 <script type="text/javascript">
-    function codeAddress()[
+    function codeAddress(){
         alert("in js......");
         var string="You have liked this photo";
-        var label=document.getElementById("liked").innerText=string;
+        document.getElementById("liked").innerHTML=string;
         
-    ]
+    }
 </script>
     </head>
     
