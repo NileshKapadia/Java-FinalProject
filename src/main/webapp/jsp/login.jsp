@@ -29,7 +29,7 @@
 
 <script type="text/javascript">
     function codeAddress(){
-        alert("in js......");
+       // alert("in js......");
         var string="You have liked this photo";
         document.getElementById("liked").innerHTML=string;
         
@@ -167,7 +167,7 @@
                               <form action="" method="get">
                             <table>
                             <input type="hidden" name="image_id" value="<%=img_id%>">
-                           <input type="hidden" id="lat" name="lat" value="" /><br>
+                          
                            <label name="liked" id="liked"></label>
                             <tr>  <td> <input type="submit" value="Like" id="lik" onclick="codeAddress()"/></td></tr>
                             </table>
