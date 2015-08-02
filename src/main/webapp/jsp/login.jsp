@@ -137,8 +137,8 @@
                                 
                                 String comment1 = rs1.getString("comment");
                                  %>
-                                 <table>
-                                     <tr><td><%=comment1%> </td></tr></table>
+                                    <table>
+                                     <tr><td><%=comment1%> </td></tr>
                             <%
                             }
 
@@ -150,7 +150,7 @@
                         
                        
                             <form action="/comment" method="get">
-                            <table>
+                         
                             <input type="hidden" name="image_id" value="<%=img_id%>">
                             <tr><td><input type="text" name="comment" value=""></td></tr>
                             <tr>  <td> <input type="submit" value="Comment"></td></tr>
