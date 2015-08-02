@@ -151,7 +151,7 @@
                        
                         <form action="/comment" method="get">
                             <table>
-                                <input type="hidden" name="image_id" value="<%=img_id1%>">
+                                <input type="hidden" name="image_id" value="<%=img_id%>">
                             <tr><td><input type="text" name="comment" id="comment"></td></tr>
                             <tr>  <td> <input type="submit" value="Comment"></td></tr>
                             </table
