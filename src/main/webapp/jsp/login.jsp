@@ -30,23 +30,12 @@
 <script type="text/javascript">
     //function codeAddress(){
        // alert("in js......");
-      //  var string="You have liked this photo";
-       // document.getElementById("liked").value = "Liked";
-        //document.getElementById("liked").innerHTML=string;
+        var string="You have liked this photo";
+       //document.getElementById("liked").value = "Liked";
+        document.getElementById("liked").innerHTML='Liked';
         
     //}
-    function toggleText(button_id) 
-{
-   var el = document.getElementById(button_id);
-   if (el.firstChild.data == "Lock") 
-   {
-       el.firstChild.data = "Unlock";
-   }
-   else 
-   {
-     el.firstChild.data = "Lock";
-   }
-}
+   
 </script>
     </head>
     
@@ -182,7 +171,7 @@
                             <input type="hidden" name="image_id" value="<%=img_id%>">
                           
                            <label name="liked" id="liked"></label>
-                           <button id="myButton" onClick="lock(); toggleText(this.id);">Lock</button>
+                          
                             <tr>  <td> <input type="submit" value="Like" id="lik" onclick="codeAddress()"/></td></tr>
                             </table>
                       
