@@ -124,7 +124,7 @@
                     <table>
                         
                             
-                        <tr> <td><%=username%></td></tr>
+                        <tr> <td>Posted By<%=username%></td></tr>
                         <tr> <td><%=caption%></td></tr>
                         <tr><td id="imagetd" rowspan="7"><img src="../image.jsp?id=<%=img_id%>" width="250" height="250"/><td> </tr>
                        
