@@ -168,7 +168,7 @@ document.getElementById("myButton1").value="Liked";
                             </table>
                       
                       </form>
-                              <form action="" method="get">
+                              <form action="" method="">
                             <table>
                             <input type="hidden" name="image_id" value="<%=img_id%>">
                           
