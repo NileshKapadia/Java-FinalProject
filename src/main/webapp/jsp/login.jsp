@@ -122,6 +122,7 @@
             
                       %> 
                        <br><br><br>
+                       <div id="photoset">
                     <table>
                         
                             
@@ -158,7 +159,9 @@
                             <tr><td><input type="text" name="comment" value=""></td></tr>
                             <tr>  <td> <input type="submit" value="Comment"></td></tr>
                             </table>
-                      
+                            
+                            </div>
+                            <div id="photoset">
                      <script type="text/javascript">
     var clicks = 0;
     function onClick() {
