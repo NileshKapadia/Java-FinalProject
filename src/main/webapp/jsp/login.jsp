@@ -121,12 +121,10 @@
             
                       %> 
                        <br><br><br>
-                    <table>
+                    
                         
                             
-                        <tr> <td><%=username%></td></tr>
-                        <tr> <td><%=caption%></td></tr>
-                        <tr><td id="imagetd" rowspan="7"><img src="../image.jsp?id=<%=img_id%>" width="200" height="200"/><td> </tr>
+                        
                        
                        <%
                              
@@ -139,8 +137,12 @@
                                 
                                 String comment1 = rs1.getString("comment");
                                  %>
-                                 
-                             <tr><td><%=comment1%> </td></tr>
+                                <table> 
+                             <tr> <td><%=username%></td></tr>
+                              <tr> <td><%=caption%></td></tr>
+                               <tr><td id="imagetd" rowspan="7"><img src="../image.jsp?id=<%=img_id%>" width="200" height="200"/><td> </tr>
+                                 <tr><td><%=comment1%> </td></tr>
+                                </table>
                             <%
                             }
 
