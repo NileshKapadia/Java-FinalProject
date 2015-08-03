@@ -29,14 +29,15 @@
 
 
 <script type="text/javascript">
-    int clicks = 0;
-    function click() {
+    var clicks = 0;
+    function onClick() {
         clicks += 1;
         document.getElementById("clicks").innerHTML = clicks;
     };
     </script>
-    <button type="button" onClick="click()">Click me</button>
+    <button type="button" onClick="onClick()">Click me</button>
     <p>Clicks: <a id="clicks">0</a></p>
+
     </head>
     
         
