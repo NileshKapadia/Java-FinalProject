@@ -33,7 +33,7 @@
         //var string="You have liked this photo";
       
 
-document.getElementById("myButton1").value="Liked";
+document.getElementById("myButton1").style.backgroundColor = "yellow";
        // document.getElementById("liked").innerHTML='Liked';
         
     }
