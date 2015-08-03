@@ -75,14 +75,7 @@ public class login extends HttpServlet {
             Logger.getLogger(login.class.getName()).log(Level.SEVERE, null, ex);
         }
 
-        /* if(conn==null)
-         {
-         pt.println("connection failed");
-         }
-         else
-         {
-         pt.println("connection success");
-         }*/
+        
     }
 
 }

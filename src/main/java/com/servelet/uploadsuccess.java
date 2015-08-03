@@ -29,24 +29,18 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet(name = "uploadsuccess", urlPatterns = {"/uploadsuccess"})
 public class uploadsuccess extends HttpServlet {
 
-   
-  
-
-   
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        
-         PrintWriter out = response.getWriter();
+
+        PrintWriter out = response.getWriter();
 
         //out.write("exception coccure123");
         // JsonObjectBuilder json = Json.createObjectBuilder();
         //JsonArrayBuilder productarray = Json.createArrayBuilder();
-        
         user p = new user();
-        ArrayList<user> users= new ArrayList<user>();
-        
-        
+        ArrayList<user> users = new ArrayList<user>();
+
         Connection conn = databaseconnection.getConnection();
 
         if (conn == null) {
@@ -63,27 +57,18 @@ public class uploadsuccess extends HttpServlet {
 
             while (rs.next()) {
 
-                user  pnew = new user(rs.getString(1),rs.getString(2), rs.getString(3));
+                user pnew = new user(rs.getString(1), rs.getString(2), rs.getString(3));
                 users.add(pnew);
                 out.println(rs.getString(1));
                 out.println(rs.getString(2));
                 out.println(rs.getString(3));
-                 
+
             }
             String json = new Gson().toJson(users);
             out.print(json);
 
-        }  catch (SQLException ex) {
+        } catch (SQLException ex) {
             Logger.getLogger(uploadsuccess.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 }
-
-        
-        
-       
-
-    
-  
-
-

@@ -25,50 +25,39 @@ import javax.servlet.http.HttpServletResponse;
  */
 @WebServlet(name = "sigup", urlPatterns = {"/sigup"})
 public class sigup extends HttpServlet {
-    
-    
-   protected void doGet(HttpServletRequest request, HttpServletResponse response)
+
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-       
+
         PrintWriter pt = response.getWriter();
-        
-        String username=request.getParameter("email");
-        String password=request.getParameter("password");
-        
-        String sex=request.getParameter("gender");
-        String age=request.getParameter("age");
-         int age1 = Integer.parseInt(age);
-        
-        
+
+        String username = request.getParameter("email");
+        String password = request.getParameter("password");
+
+        String sex = request.getParameter("gender");
+        String age = request.getParameter("age");
+        int age1 = Integer.parseInt(age);
+
         pt.println(username);
         pt.println(password);
         pt.println(sex);
         pt.println(age1);
-        
-       Connection conn=databaseconnection.getConnection();
-       Statement smt;
-       try {
-           smt = conn.createStatement();
-           
+
+        Connection conn = databaseconnection.getConnection();
+        Statement smt;
+        try {
+            smt = conn.createStatement();
+
             String sql = "INSERT INTO login (username,password , gender , age) "
-                   + "VALUES ('" + username + "', '" + password+ "','" + sex + "','" + age1+ "')";
-          
-           smt.executeUpdate(sql);
+                    + "VALUES ('" + username + "', '" + password + "','" + sex + "','" + age1 + "')";
+
+            smt.executeUpdate(sql);
             pt.println("ddddddddddddddddddddddddd");
             response.sendRedirect("jsp/login.jsp");
-           
-           
-           
-           
-       } catch (SQLException ex) {
-           Logger.getLogger(sigup.class.getName()).log(Level.SEVERE, null, ex);
-                 
-        
-                }
-   }
+
+        } catch (SQLException ex) {
+            Logger.getLogger(sigup.class.getName()).log(Level.SEVERE, null, ex);
+
+        }
+    }
 }
-       
-
-   
-  
-

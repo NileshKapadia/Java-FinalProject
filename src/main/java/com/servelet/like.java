@@ -44,7 +44,7 @@ public class like extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet like</title>");            
+            out.println("<title>Servlet like</title>");
             out.println("</head>");
             out.println("<body>");
             out.println("<h1>Servlet like at " + request.getContextPath() + "</h1>");
@@ -70,12 +70,8 @@ public class like extends HttpServlet {
 
         PrintWriter pt = response.getWriter();
 
-       
         String image_id = request.getParameter("image_id");
-        
-        
 
-       
         Connection conn = databaseconnection.getConnection();
         Statement smt;
         try {

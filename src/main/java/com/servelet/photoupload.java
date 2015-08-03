@@ -35,205 +35,68 @@ import javax.xml.bind.DatatypeConverter;
 @WebServlet(name = "photoupload", urlPatterns = {"/photoupload"})
 @MultipartConfig(maxFileSize = 16177215)
 public class photoupload extends HttpServlet {
-    
-    
-/*JsonArrayBuilder array = Json.createArrayBuilder();
-   
-    
-    
-    
-     @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException 
-    {
-    
-response.setHeader("Cache-control", "no-cache, no-store");
-response.setHeader("Pragma", "no-cache");
-response.setHeader("Expires", "-1");
-        try {
-            PrintWriter pt = response.getWriter();
-            String imagequery = "SELECT photo from photoupload";
-            
-            Connection conn = databaseconnection.getConnection();
-            Statement statement = conn.createStatement();
-            
-            ResultSet rs = statement.executeQuery(imagequery);
-            int count = 0;
-            int a1= 0;
-           String base64String="";
-            
-            
-            while (rs.next()) {
-                count++;
-                
-                InputStream stream = rs.getBinaryStream(1);
-                ByteArrayOutputStream output = new ByteArrayOutputStream();
-                
-                
-                try {
-                    a1 = stream.read();
-                } catch (IOException ex) {
-                pt.write("in stream problem");
-                }
-                while (a1 >= 0) {
-                    output.write((char) a1);
-                    try {
-                        a1 = stream.read();
-                    } catch (IOException ex) {
-                     pt.write("cant write array");
-                    }
-                }
-                byte[] dt = new byte[166666];
-                base64String = DatatypeConverter.printBase64Binary(output.toByteArray());
-               HttpSession session=request.getSession();
-               String base4String =(String) session.getAttribute("base64String");
-               
-               
-                pt.write(base64String);
-                
-                 if (count == 0) 
-                 {
-              
-                    base64String = "images/icon.png";
-                    
-              JsonObjectBuilder build = Json.createObjectBuilder().add("image", base64String);
 
-                 array.add(build);
-               
-               //return "did not read image from data base";
-
-           }
-
-       
-               // pt.write("rfhrfjtykhjfjyukjtyjgjk,uimhgjgykutju");
-            }
-            
-            String img = array.build().toString();
-            
-            
-            pt.write(img);
-        } catch (SQLException ex) {
-                        PrintWriter pt = response.getWriter();
-
-            pt.write("in cache get");
-            //.getLogger(photoupload.class.getName()).log(Level.SEVERE, null, ex);
-        }
-    
-       
-          
-       } 
-*/
     
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-       
-//response.setHeader("Cache-control", "no-cache, no-store");
-//response.setHeader("Pragma", "no-cache");
-//response.setHeader("Expires", "-1");
+
         PrintWriter pt = response.getWriter();
-        
-        
-        String uploadimage=request.getParameter("image");
-        
-        String caption1=request.getParameter("caption");
-         
-          HttpSession session = request.getSession();
-        String userid =(String) session.getAttribute("username");
-      
-        
-        //pt.println(uploadimage);
-        //pt.println(caption1);
-         //pt.println(userid);
-        
+
+        String uploadimage = request.getParameter("image");
+
+        String caption1 = request.getParameter("caption");
+
+        HttpSession session = request.getSession();
+        String userid = (String) session.getAttribute("username");
+
         
         InputStream inputStream = null; // input stream of the upload file
-        
-      
-       Part filePart = request.getPart("image");
-       if (filePart != null) {
-            
-           
-           inputStream = filePart.getInputStream();
-           //pt.println(inputStream);
-       }
-       
-       
+
+        Part filePart = request.getPart("image");
+        if (filePart != null) {
+
+            inputStream = filePart.getInputStream();
+            //pt.println(inputStream);
+        }
+
         // connection to the database
-       String message = null;  // message will be sent back to client
-        
-       try {
+        String message = null;  // message will be sent back to client
+
+        try {
            // connects to the database
-           
-             Connection conn = databaseconnection.getConnection();
 
-           // constructs SQL statement
-           String sql = "INSERT INTO photoupload (username, photo, caption) values (?, ?, ?)";
-             
-           PreparedStatement statement = conn.prepareStatement(sql);
-           statement.setString(1, userid);
-           
-            
+            Connection conn = databaseconnection.getConnection();
+
+            // constructs SQL statement
+            String sql = "INSERT INTO photoupload (username, photo, caption) values (?, ?, ?)";
+
+            PreparedStatement statement = conn.prepareStatement(sql);
+            statement.setString(1, userid);
+
             if (inputStream != null) {
-              
-             statement.setBlob(2, inputStream);
-           }
-           statement.setString(3, caption1);
-           
 
-           // sends the statement to the database server
-          int row = statement.executeUpdate();
-          
-           if (row > 0) {
-               
-                HttpSession  success_ad = request.getSession(true);
-                success_ad.setAttribute("success_message","Your Ad is posted successfully!");
+                statement.setBlob(2, inputStream);
+            }
+            statement.setString(3, caption1);
+
+            // sends the statement to the database server
+            int row = statement.executeUpdate();
+
+            if (row > 0) {
+
+                HttpSession success_ad = request.getSession(true);
+                success_ad.setAttribute("success_message", "Your Ad is posted successfully!");
                 response.sendRedirect("jsp/login.jsp");
-           }
-          
-          
-          
-          } catch (SQLException ex) {
-              //pt.write("post cache");
+            }
+
+        } catch (SQLException ex) {
+           
             Logger.getLogger(photoupload.class.getName()).log(Level.SEVERE, null, ex);
         }
 
-           
-           
- }
+    }
 
-   
-    
-}          
-          
-          
-         /* String sql1 = "select * from photoupload";
-            ResultSet rs = statement.executeQuery(sql1);
-           String username=null;
-            String caption2=null;
-             String image=null;
-           while (rs.next()) {
-                username = rs.getString("username");
-                caption2 = rs.getString("caption");
-                image = rs.getString("image");
-                
-                pt.println(username);
-                   pt.println(caption2);
+}
 
-            }*/
-           
-           
-           
-               //response.sendRedirect("jsp/Success.jsp");
-          
-    
-    
-
-
-
-    
-    
-
-
-  
 
