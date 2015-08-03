@@ -31,7 +31,8 @@
     function codeAddress(){
        // alert("in js......");
         var string="You have liked this photo";
-        document.getElementById("liked").innerHTML=string;
+        document.getElementById("liked").value = "Liked";
+        //document.getElementById("liked").innerHTML=string;
         
     }
 </script>
