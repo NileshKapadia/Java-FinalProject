@@ -29,10 +29,11 @@
 
 <script type="text/javascript">
     function codeAddress(){
-        alert("in js......");
-        var string="You have liked this photo";
+        //alert("in js......");
+        //var string="You have liked this photo";
       
-    document.getElementById("lik").innerHTML="New Button Text";
+
+document.getElementById("myButton1").value="New Button Text";
        // document.getElementById("liked").innerHTML='Liked';
         
     }
@@ -173,7 +174,7 @@
                           
                            <label name="liked" id="liked"></label>
                           
-                            <tr>  <td> <input type="submit" value="Like" id="lik" onclick="codeAddress()"/></td></tr>
+                            <tr>  <td> <input type="submit" value="Like" id="myButton1" onclick="codeAddress()"/></td></tr>
                             </table>
                       
                       </form>
