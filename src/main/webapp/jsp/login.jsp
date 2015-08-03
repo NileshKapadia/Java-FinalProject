@@ -28,15 +28,6 @@
 <script type="text/javascript" src="../js/profilepage.js"></script>
 
 
-<script type="text/javascript">
-    var clicks = 0;
-    function onClick() {
-        clicks += 1;
-        document.getElementById("clicks").innerHTML = clicks;
-    };
-    </script>
-    <button type="button" onClick="onClick()">Click me</button>
-    <p>Clicks: <a id="clicks">0</a></p>
 
     </head>
     
@@ -166,14 +157,16 @@
                             <tr>  <td> <input type="submit" value="Comment"></td></tr>
                             </table>
                       
-                      </form>
-                              <form action="" method="">
-                            
-                          
-                             <input type="submit" value="Like" id="myButton1" onclick="codeAddress()"/>
-                            
-                      
-                      </form>
+                     <script type="text/javascript">
+    var clicks = 0;
+    function onClick() {
+        clicks += 1;
+        document.getElementById("clicks").innerHTML = clicks;
+    };
+    </script>
+    <button type="button" onClick="onClick()">Like</button>
+    <p>Likes: <a id="clicks">0</a></p>
+
                    
                     
                     
