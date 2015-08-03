@@ -127,7 +127,7 @@
                         <tr> <td><%=username%></td></tr>
                         <tr> <td><%=caption%></td></tr>
                         <tr><td id="imagetd" rowspan="7"><img src="../image.jsp?id=<%=img_id%>" width="200" height="200"/><td> </tr>
-                       <td>
+                       
                        <%
                              
                        Statement smt1 = conn.createStatement();
@@ -140,7 +140,7 @@
                                 String comment1 = rs1.getString("comment");
                                  %>
                                  
-                                     <td><%=comment1%> </td>
+                             <tr><td><%=comment1%> </td></tr>
                             <%
                             }
 
