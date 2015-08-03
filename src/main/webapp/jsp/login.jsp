@@ -28,13 +28,13 @@
 <script type="text/javascript" src="../js/profilepage.js"></script>
 
 <script type="text/javascript">
-    //function codeAddress(){
-       // alert("in js......");
+    function codeAddress(){
+        alert("in js......");
         var string="You have liked this photo";
-       //document.getElementById("liked").value = "Liked";
-        document.getElementById("liked").innerHTML='Liked';
+      document.getElementById("liked").innerHTML ="string";
+       // document.getElementById("liked").innerHTML='Liked';
         
-    //}
+    }
    
 </script>
     </head>
