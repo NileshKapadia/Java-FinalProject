@@ -169,13 +169,10 @@ document.getElementById("myButton1").value="Liked";
                       
                       </form>
                               <form action="" method="">
-                            <table>
-                            <input type="hidden" name="image_id" value="<%=img_id%>">
+                            
                           
-                           <label name="liked" id="liked"></label>
-                          
-                            <tr>  <td> <input type="submit" value="Like" id="myButton1" onclick="codeAddress()"/></td></tr>
-                            </table>
+                             <input type="submit" value="Like" id="myButton1" onclick="codeAddress()"/>
+                            
                       
                       </form>
                    
