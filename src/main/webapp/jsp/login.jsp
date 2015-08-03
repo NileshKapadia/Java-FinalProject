@@ -70,6 +70,7 @@
                 <input type="submit" name="submit" value="Upload">
             </form>
         </div>
+        <div id="photoset">
                 <!--<div id="photo">
                     
                     
@@ -124,7 +125,7 @@
                     <table>
                         
                             
-                        <tr> <td>Posted By<%=username%></td></tr>
+                        <tr> <td>Posted By::<%=username%></td></tr>
                         <tr> <td><%=caption%></td></tr>
                         <tr><td id="imagetd" rowspan="7"><img src="../image.jsp?id=<%=img_id%>" width="250" height="250"/><td> </tr>
                        
@@ -170,10 +171,10 @@
 
                    
                     
-                    
+                     </table> 
                 </div>
                        
-                    </table>
+                  
 
                     <%
                            
