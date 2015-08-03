@@ -27,18 +27,16 @@
 <script src="http://code.jquery.com/jquery.min.js"></script>
 <script type="text/javascript" src="../js/profilepage.js"></script>
 
-<script type="text/javascript">
-    function codeAddress(){
-        //alert("in js......");
-        //var string="You have liked this photo";
-      
 
-document.getElementById("myButton1").style.backgroundColor = "yellow";
-       // document.getElementById("liked").innerHTML='Liked';
-        
-    }
-   
-</script>
+<script type="text/javascript">
+    int clicks = 0;
+    function click() {
+        clicks += 1;
+        document.getElementById("clicks").innerHTML = clicks;
+    };
+    </script>
+    <button type="button" onClick="click()">Click me</button>
+    <p>Clicks: <a id="clicks">0</a></p>
     </head>
     
         
