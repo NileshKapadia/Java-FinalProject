@@ -68,7 +68,7 @@ public class comment extends HttpServlet {
        String img_id= (String) session1.getAttribute("img_id");
 
         pt.println(comment);
-            pt.println(img_id);
+           // pt.println(img_id);
         pt.println(image_id);
         Connection conn = databaseconnection.getConnection();
         Statement smt;
@@ -80,7 +80,7 @@ public class comment extends HttpServlet {
 
             smt.executeUpdate(sql);
 
-           // response.sendRedirect("jsp/login.jsp");
+            response.sendRedirect("jsp/login.jsp");
 
         } catch (SQLException ex) {
             Logger.getLogger(sigup.class.getName()).log(Level.SEVERE, null, ex);
