@@ -37,13 +37,13 @@ public class sigup extends HttpServlet {
 
         String sex = request.getParameter("gender");
         
-        String username1 = request.getParameter("username1");
+        String UserName = request.getParameter("username1");
      
         
             HttpSession  user = request.getSession();
-        user.setAttribute("username1", username1);
+        user.setAttribute("UserName", UserName);
 
-        pt.println(username1);
+        pt.println(UserName);
         pt.println(password);
         pt.println(sex);
        
@@ -54,7 +54,7 @@ public class sigup extends HttpServlet {
             smt = conn.createStatement();
 
             String sql = "INSERT INTO login (username,username1,password , gender) "
-                    + "VALUES ('" + username + "', '" + username1 + "','" + password + "','" + sex + "')";
+                    + "VALUES ('" + username + "', '" + UserName + "','" + password + "','" + sex + "')";
 
             smt.executeUpdate(sql);
             pt.println("ddddddddddddddddddddddddd");
