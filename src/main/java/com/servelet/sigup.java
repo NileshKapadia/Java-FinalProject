@@ -40,8 +40,8 @@ public class sigup extends HttpServlet {
         String username1 = request.getParameter("username1");
      
         
-          HttpSession  session = request.getSession();
-        session.setAttribute("username1", username1);
+            HttpSession  user = request.getSession();
+        user.setAttribute("username1", username1);
 
         pt.println(username1);
         pt.println(password);
