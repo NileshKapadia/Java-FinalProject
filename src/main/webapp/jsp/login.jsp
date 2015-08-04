@@ -125,27 +125,6 @@
                 %>
 
                 <tr><td><%=comment1%> </td></tr>
-                <form action="/comment" method="get">
-                    <table>
-                        <input type="hidden" name="image_id" value="<%=img_id%>">
-                        <tr><td><input type="text" name="comment" value=""></td></tr>
-                        <tr>  <td> <input type="submit" value="Comment"></td></tr>
-                    </table>
-
-                    </div>
-                    <div id="photoset">
-                        <script type="text/javascript">
-                            var clicks = 0;
-                            function onClick() {
-                                clicks += 1;
-                                document.getElementById("clicks").innerHTML = clicks;
-                            }
-                            ;
-                        </script>
-                        <button type="button" onClick="onClick()">Like</button>
-                        <p>Likes: <a id="clicks">0</a></p>
-
-
                 <%
                     }
 
@@ -164,7 +143,7 @@
                     </table>
 
                     </div>
-                    <div id="photoset">
+                    <!--<div id="photoset">
                         <script type="text/javascript">
                             var clicks = 0;
                             function onClick() {
@@ -179,7 +158,7 @@
 
 
 
-                    </div>
+                    </div>-->
 
 
 
