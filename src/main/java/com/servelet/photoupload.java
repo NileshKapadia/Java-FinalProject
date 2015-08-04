@@ -49,8 +49,9 @@ public class photoupload extends HttpServlet {
 
         HttpSession user = request.getSession();
         String userid = (String) user.getAttribute("UserName");
+         String sex = (String) user.getAttribute("sex");
         
-        pt.println(uploadimage);
+        pt.println(sex);
         pt.println(caption1);
         pt.println(userid);
 

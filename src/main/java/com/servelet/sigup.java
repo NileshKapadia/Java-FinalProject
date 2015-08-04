@@ -42,6 +42,7 @@ public class sigup extends HttpServlet {
         
             HttpSession  user = request.getSession();
         user.setAttribute("UserName", UserName);
+         user.setAttribute("sex", sex);
 
         pt.println(UserName);
         pt.println(password);
