@@ -140,10 +140,12 @@
                         <input type="hidden" name="image_id" value="<%=img_id%>">
                         <tr><td><input type="text" name="comment" value=""></td></tr>
                         <tr>  <td> <input type="submit" value="Comment"></td></tr>
+                        
                     </table>
+                </form>
 
                     </div>
-                    <!--<div id="photoset">
+                    <div id="photoset">
                         <script type="text/javascript">
                             var clicks = 0;
                             function onClick() {
@@ -158,7 +160,7 @@
 
 
 
-                    </div>-->
+                    </div>
 
 
 
@@ -170,6 +172,6 @@
                     %> 
 
 
-
+    </body>
 
                     </html>
