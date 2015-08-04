@@ -48,7 +48,7 @@ public class photoupload extends HttpServlet {
         String caption1 = request.getParameter("caption");
 
         HttpSession session = request.getSession();
-        String userid = (String) session.getAttribute("username");
+        String userid = (String) session.getAttribute("username1");
 
         
         InputStream inputStream = null; // input stream of the upload file
@@ -69,7 +69,7 @@ public class photoupload extends HttpServlet {
             Connection conn = databaseconnection.getConnection();
 
             // constructs SQL statement
-            String sql = "INSERT INTO photoupload (username, photo, caption) values (?, ?, ?)";
+            String sql = "INSERT INTO photoupload (username1, photo, caption) values (?, ?, ?)";
 
             PreparedStatement statement = conn.prepareStatement(sql);
             statement.setString(1, userid);

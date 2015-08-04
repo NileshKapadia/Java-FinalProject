@@ -18,6 +18,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  *
@@ -36,7 +37,11 @@ public class sigup extends HttpServlet {
 
         String sex = request.getParameter("gender");
         String age = request.getParameter("age");
+        String username1 = request.getParameter("username1");
         int age1 = Integer.parseInt(age);
+        
+          HttpSession  session = request.getSession();
+        session.setAttribute("username1", username1);
 
         pt.println(username);
         pt.println(password);
@@ -48,8 +53,8 @@ public class sigup extends HttpServlet {
         try {
             smt = conn.createStatement();
 
-            String sql = "INSERT INTO login (username,password , gender , age) "
-                    + "VALUES ('" + username + "', '" + password + "','" + sex + "','" + age1 + "')";
+            String sql = "INSERT INTO login (username,username1,password , gender , age) "
+                    + "VALUES ('" + username + "', '" + username1 + "','" + password + "','" + sex + "','" + age1 + "')";
 
             smt.executeUpdate(sql);
             pt.println("ddddddddddddddddddddddddd");
