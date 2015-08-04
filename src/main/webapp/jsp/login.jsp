@@ -95,7 +95,7 @@
 
                 while (rs.next()) {
                     String img_id = rs.getString("img_id");
-                    String username = rs.getString("username");
+                    String username = rs.getString("username1");
                     String caption = rs.getString("caption");
                     
 
@@ -106,7 +106,7 @@
             <table>
 
 
-                <tr> <td>Posted By::<%=username%></td></tr>
+                <tr> <td><h2>Posted By::<%=username%></h2></td></tr>
                 <tr> <td><%=caption%></td></tr>
                 <tr><td id="imagetd" rowspan="7"><img src="../image.jsp?id=<%=img_id%>" width="250" height="250"/><td> </tr>
 
@@ -123,7 +123,7 @@
                         String comment1 = rs1.getString("comment");
                 %>
 
-                <tr><td><h2><b><%=comment1%> </b></h2></td></tr>
+                <tr><td><h2><%=comment1%></h2></td></tr>
                 <%
                     }
 

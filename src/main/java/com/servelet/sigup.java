@@ -46,7 +46,7 @@ public class sigup extends HttpServlet {
         pt.println(username1);
         pt.println(password);
         pt.println(sex);
-      
+       
 
         Connection conn = databaseconnection.getConnection();
         Statement smt;
