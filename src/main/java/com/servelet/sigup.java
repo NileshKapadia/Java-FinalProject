@@ -53,8 +53,8 @@ public class sigup extends HttpServlet {
         try {
             smt = conn.createStatement();
 
-            String sql = "INSERT INTO login (username,username1,password , gender , age) "
-                    + "VALUES ('" + username + "', '" + username1 + "','" + password + "','" + sex + "','" + age1 + "')";
+            String sql = "INSERT INTO login (username,username1,password , gender) "
+                    + "VALUES ('" + username + "', '" + username1 + "','" + password + "','" + sex + "')";
 
             smt.executeUpdate(sql);
             pt.println("ddddddddddddddddddddddddd");
