@@ -64,8 +64,11 @@ public class comment extends HttpServlet {
 
         String comment = request.getParameter("comment");
         String image_id = request.getParameter("image_id");
+        HttpSession  session1 = request.getSession();
+       String img_id= (String) session1.getAttribute("img_id");
 
         pt.println(comment);
+            pt.println(img_id);
         pt.println(image_id);
         Connection conn = databaseconnection.getConnection();
         Statement smt;

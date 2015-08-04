@@ -114,6 +114,9 @@
 
                     Statement smt1 = conn.createStatement();
                     String query1 = "select * from comment where img_id='" + img_id + "'";
+                   
+                     HttpSession  session1 = request.getSession();
+                    session1.setAttribute("img_id", img_id);
 
                     ResultSet rs1 = smt1.executeQuery(query1);
                     while (rs1.next()) {
