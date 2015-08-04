@@ -47,11 +47,11 @@ public class photoupload extends HttpServlet {
 
         String caption1 = request.getParameter("caption");
 
-        HttpSession user = request.getSession();
-        String userid = (String) user.getAttribute("UserName");
-         String sex = (String) user.getAttribute("sex");
+        HttpSession session = request.getSession();
+       String userid= (String) session.getAttribute("username");
+         
         
-        pt.println(sex);
+       
         pt.println(caption1);
         pt.println(userid);
 
