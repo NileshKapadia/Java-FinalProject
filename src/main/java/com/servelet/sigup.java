@@ -36,9 +36,9 @@ public class sigup extends HttpServlet {
         String password = request.getParameter("password");
 
         String sex = request.getParameter("gender");
-        String age = request.getParameter("age");
+        
         String username1 = request.getParameter("username1");
-        int age1 = Integer.parseInt(age);
+     
         
           HttpSession  session = request.getSession();
         session.setAttribute("username1", username1);
@@ -46,7 +46,7 @@ public class sigup extends HttpServlet {
         pt.println(username1);
         pt.println(password);
         pt.println(sex);
-        pt.println(age1);
+      
 
         Connection conn = databaseconnection.getConnection();
         Statement smt;
