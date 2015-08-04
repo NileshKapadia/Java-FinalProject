@@ -95,7 +95,7 @@
 
                 while (rs.next()) {
                     String img_id = rs.getString("img_id");
-                    String username = rs.getString("username1");
+                    String username = rs.getString("username");
                     String caption = rs.getString("caption");
                     
 
