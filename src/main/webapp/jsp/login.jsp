@@ -154,7 +154,7 @@
                             ;
                         </script>
                         <button type="button" onClick="onClick()">Like</button>
-                        <p>Likes: <a id="clicks">0</a></p>
+                        <p>Likes: <a id="clicks">10</a></p>
 
 
 

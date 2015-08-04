@@ -34,8 +34,8 @@ public class login extends HttpServlet {
 
         String username = request.getParameter("username");
         String password = request.getParameter("password");
-        
-        HttpSession  session = request.getSession();
+
+        HttpSession session = request.getSession();
         session.setAttribute("username", username);
 
         PrintWriter pt = response.getWriter();
@@ -54,7 +54,7 @@ public class login extends HttpServlet {
             ResultSet rs = stmt.executeQuery(sql);
             while (rs.next()) {
                 id = rs.getString("username");
-                 pass = rs.getString("password");
+                pass = rs.getString("password");
 
             }
             if (id != null && pass != null) {
@@ -75,7 +75,6 @@ public class login extends HttpServlet {
             Logger.getLogger(login.class.getName()).log(Level.SEVERE, null, ex);
         }
 
-        
     }
 
 }
