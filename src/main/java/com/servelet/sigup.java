@@ -43,7 +43,7 @@ public class sigup extends HttpServlet {
           HttpSession  session = request.getSession();
         session.setAttribute("username1", username1);
 
-        pt.println(username);
+        pt.println(username1);
         pt.println(password);
         pt.println(sex);
         pt.println(age1);
@@ -58,7 +58,7 @@ public class sigup extends HttpServlet {
 
             smt.executeUpdate(sql);
             pt.println("ddddddddddddddddddddddddd");
-            response.sendRedirect("jsp/login.jsp");
+            //response.sendRedirect("jsp/login.jsp");
 
         } catch (SQLException ex) {
             Logger.getLogger(sigup.class.getName()).log(Level.SEVERE, null, ex);
