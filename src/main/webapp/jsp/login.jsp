@@ -146,7 +146,7 @@
                     </div>
                     <div id="photoset">
                         <script type="text/javascript">
-                            var clicks = 0;
+                            var clicks = 10;
                             function onClick() {
                                 clicks += 1;
                                 document.getElementById("clicks").innerHTML = clicks;
