@@ -11,6 +11,10 @@ package com.servelet;
  */
 public class user {
 
+    static void getAttribute(String userName) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
     private String image;
     private String caption;
 

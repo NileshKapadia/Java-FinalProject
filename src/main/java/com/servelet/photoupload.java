@@ -36,7 +36,6 @@ import javax.xml.bind.DatatypeConverter;
 @MultipartConfig(maxFileSize = 16177215)
 public class photoupload extends HttpServlet {
 
-    
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -50,7 +49,6 @@ public class photoupload extends HttpServlet {
         HttpSession session = request.getSession();
         String userid = (String) session.getAttribute("username");
 
-        
         InputStream inputStream = null; // input stream of the upload file
 
         Part filePart = request.getPart("image");
@@ -64,7 +62,7 @@ public class photoupload extends HttpServlet {
         String message = null;  // message will be sent back to client
 
         try {
-           // connects to the database
+            // connects to the database
 
             Connection conn = databaseconnection.getConnection();
 
@@ -91,12 +89,10 @@ public class photoupload extends HttpServlet {
             }
 
         } catch (SQLException ex) {
-           
+
             Logger.getLogger(photoupload.class.getName()).log(Level.SEVERE, null, ex);
         }
 
     }
 
 }
-
-

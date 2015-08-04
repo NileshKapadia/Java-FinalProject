@@ -36,18 +36,9 @@ public class sigup extends HttpServlet {
         String password = request.getParameter("password");
 
         String sex = request.getParameter("gender");
-        
-       
-     
-        
-           
-      
-         
 
-        
         pt.println(password);
         pt.println(sex);
-       
 
         Connection conn = databaseconnection.getConnection();
         Statement smt;
