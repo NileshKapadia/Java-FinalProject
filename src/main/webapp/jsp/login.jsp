@@ -107,7 +107,7 @@
 
 
                 <tr> <td><h2>Posted By::<%=username%></h2></td></tr>
-                <tr> <td><%=caption%></td></tr>
+                <tr> <td><h3><%=caption%></h3></td></tr>
                 <tr><td id="imagetd" rowspan="7"><img src="../image.jsp?id=<%=img_id%>" width="250" height="250"/><td> </tr>
 
                 <%
