@@ -73,7 +73,7 @@ public class photoupload extends HttpServlet {
             Connection conn = databaseconnection.getConnection();
 
             // constructs SQL statement
-            String sql = "INSERT INTO photoupload (username1, photo, caption) values (?, ?, ?)";
+            String sql = "INSERT INTO photoupload (username, photo, caption) values (?, ?, ?)";
 
             PreparedStatement statement = conn.prepareStatement(sql);
             statement.setString(1, userid);
