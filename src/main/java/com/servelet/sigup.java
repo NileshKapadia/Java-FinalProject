@@ -32,7 +32,7 @@ public class sigup extends HttpServlet {
 
         PrintWriter pt = response.getWriter();
 
-        String username = request.getParameter("email");
+        String username = request.getParameter("username");
         String password = request.getParameter("password");
 
         String sex = request.getParameter("gender");
