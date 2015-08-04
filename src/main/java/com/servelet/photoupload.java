@@ -49,6 +49,10 @@ public class photoupload extends HttpServlet {
 
         HttpSession session = request.getSession();
         String userid = (String) session.getAttribute("username1");
+        
+        pt.println(uploadimage);
+        pt.println(caption1);
+        pt.println(userid);
 
         
         InputStream inputStream = null; // input stream of the upload file
@@ -57,7 +61,7 @@ public class photoupload extends HttpServlet {
         if (filePart != null) {
 
             inputStream = filePart.getInputStream();
-            //pt.println(inputStream);
+            pt.println(inputStream);
         }
 
         // connection to the database
