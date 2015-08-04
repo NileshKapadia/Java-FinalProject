@@ -77,7 +77,7 @@ public class comment extends HttpServlet {
 
             smt.executeUpdate(sql);
 
-            response.sendRedirect("jsp/login.jsp");
+           // response.sendRedirect("jsp/login.jsp");
 
         } catch (SQLException ex) {
             Logger.getLogger(sigup.class.getName()).log(Level.SEVERE, null, ex);
